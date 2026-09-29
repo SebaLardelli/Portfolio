@@ -1,5 +1,6 @@
 ---
 import { profile } from "../data/profile";
+import { publicUrl } from "../utils/publicUrl";
 
 const channels = [
   profile.email
@@ -10,6 +11,7 @@ const channels = [
     ? { href: profile.github, text: "github.com/SebaLardelli" }
     : null,
   profile.linkedin ? { href: profile.linkedin, text: "LinkedIn" } : null,
+  { href: publicUrl("cv.pdf"), text: "Descargar CV", download: "Sebastian-Lardelli-CV.pdf" },
 ].filter((item) => item !== null);
 ---
 
@@ -20,7 +22,9 @@ const channels = [
       {
         channels.map((channel) => (
           <li>
-            <a href={channel.href}>{channel.text}</a>
+            <a href={channel.href} download={channel.download}>
+              {channel.text}
+            </a>
           </li>
         ))
       }

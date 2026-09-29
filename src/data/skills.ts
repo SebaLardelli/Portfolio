@@ -5,25 +5,15 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Lenguajes en GitHub",
-    items: ["HTML", "CSS", "JavaScript", "PHP", "Python", "Visual Basic .NET"],
+    label: "Frontend",
+    items: ["HTML", "CSS", "JavaScript", "Bootstrap"],
   },
   {
-    label: "Del currículum",
-    items: [
-      "Bases de datos",
-      "Node.js",
-      "Testing",
-      "Ingeniería del software",
-      "Metodologías ágiles",
-    ],
+    label: "Backend",
+    items: ["PHP", "Node.js", "Python", "Visual Basic .NET", "Bases de datos"],
   },
   {
-    label: "Forma de trabajo",
-    items: ["Resolución de problemas", "Trabajo en equipo", "Gestión del tiempo"],
-  },
-  {
-    label: "Idiomas",
-    items: ["Inglés básico"],
+    label: "Herramientas",
+    items: ["Git", "Docker", "Testing"],
   },
 ];

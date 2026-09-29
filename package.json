@@ -9,11 +9,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "serve dist -s -l tcp://0.0.0.0:${PORT:-4321}",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.18.2",
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "serve": "^14.2.6"
   },
   "allowScripts": {
     "esbuild": true

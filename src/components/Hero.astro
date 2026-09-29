@@ -1,5 +1,6 @@
 ---
 import { profile } from "../data/profile";
+import { publicUrl } from "../utils/publicUrl";
 ---
 
 <section class="section hero" id="inicio">
@@ -12,12 +13,13 @@ import { profile } from "../data/profile";
         <div class="actions">
           <a class="btn-signal" href="#proyectos">Ver proyectos</a>
           <a class="btn-ghost" href="#contacto">Contactarme</a>
+          <a class="btn-ghost" href={publicUrl("cv.pdf")} download="Sebastian-Lardelli-CV.pdf">Descargar CV</a>
         </div>
       </div>
       <div class="col-md-5">
         <img
           class="portrait"
-          src="/sebastian-lardelli.png"
+          src={publicUrl("sebastian-lardelli.png")}
           alt={profile.name}
           width="287"
           height="287"
