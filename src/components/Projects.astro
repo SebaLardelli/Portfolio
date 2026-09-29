@@ -1,0 +1,40 @@
+---
+import { projects } from "../data/projects";
+---
+
+<section class="section" id="proyectos">
+  <div class="container">
+    <h2>Proyectos</h2>
+    <div class="row g-3">
+      {
+        projects.map((project) => (
+          <div class="col-md-6 col-xl-4">
+            <article class="panel">
+              <h3>{project.title}</h3>
+              <p>{project.summary}</p>
+              <ul class="tags">
+                {project.stack.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              {(project.repo || project.demo) && (
+                <p class="project-links">
+                  {project.repo && (
+                    <a href={project.repo} rel="noopener noreferrer">
+                      Repositorio
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a href={project.demo} rel="noopener noreferrer">
+                      Demo
+                    </a>
+                  )}
+                </p>
+              )}
+            </article>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

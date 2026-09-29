@@ -1,0 +1,21 @@
+---
+import { stack } from "../data/stack";
+---
+
+<div class="stack-bar">
+  <p class="stack-label">Lenguajes y conocimientos</p>
+  <div class="marquee">
+    <ul class="marquee-track">
+      {
+        stack.map((item) => (
+          <li>{item}</li>
+        ))
+      }
+      {
+        stack.map((item) => (
+          <li aria-hidden="true">{item}</li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

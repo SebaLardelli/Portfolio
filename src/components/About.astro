@@ -1,0 +1,77 @@
+---
+const jobs = [
+  {
+    role: "Refrigeración integral",
+    meta: "Autónomo · intermitente",
+    text: "Diagnóstico del problema, hipótesis de solución, presupuesto cuando hace falta reparar, y ejecución del trabajo. Reparación de aires acondicionados.",
+  },
+  {
+    role: "Emprendimiento de calcomanías",
+    meta: "Autónomo · 2022–2024",
+    text: "Publicación de stock y pedidos, diseño del catálogo, CorelDRAW y edición de imagen, proveedores de impresión y vinilo, plantillas, atención al cliente en forma virtual y en locales, y control de stock y precios. Incluye la página web del proyecto.",
+  },
+  {
+    role: "Representante público",
+    meta: "Awas, Acebal · empleado · 2017–2024",
+    text: "Publicación de flyers, organización de traslados, venta de entradas con QR y cobro digital y en el lugar.",
+  },
+];
+
+const studies = [
+  {
+    title: "Tecnicatura en Desarrollo de Software",
+    place: "Instituto Zona Oeste · 2023–2025",
+  },
+  {
+    title: "Ingeniería eléctrica",
+    place: "Universidad Tecnológica Nacional · 2020–2022",
+  },
+  {
+    title: "Refrigeración integral",
+    place: "Instituto Técnico Avanzado ITA · 2017–2018",
+  },
+  {
+    title: "Formación secundaria",
+    place: "E.E.S.O. Profesor Luis Ravera · 2014–2019",
+  },
+];
+---
+
+<section class="section" id="sobre-mi">
+  <div class="container">
+    <h2>Sobre mí</h2>
+    <div class="prose">
+      <p>
+        Soy una persona trabajadora, organizada y responsable. Tengo experiencia en distintas tareas.
+        También me considero una persona resolutiva, con buen ánimo y capaz de resolver problemas.
+      </p>
+    </div>
+
+    <h3 class="subhead">Experiencia</h3>
+    <div class="row g-3">
+      {
+        jobs.map((job) => (
+          <div class="col-md-6 col-xl-4">
+            <article class="panel">
+              <h3>{job.role}</h3>
+              <p class="meta">{job.meta}</p>
+              <p>{job.text}</p>
+            </article>
+          </div>
+        ))
+      }
+    </div>
+
+    <h3 class="subhead">Formación</h3>
+    <ul class="studies">
+      {
+        studies.map((item) => (
+          <li>
+            <strong>{item.title}</strong>
+            <span>{item.place}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

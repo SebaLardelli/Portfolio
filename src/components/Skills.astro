@@ -1,0 +1,25 @@
+---
+import { skillGroups } from "../data/skills";
+---
+
+<section class="section" id="habilidades">
+  <div class="container">
+    <h2>Habilidades</h2>
+    <div class="row g-3">
+      {
+        skillGroups.map((group) => (
+          <div class="col-md-6 col-xl-4">
+            <article class="panel">
+              <h3>{group.label}</h3>
+              <ul class="skill-list">
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

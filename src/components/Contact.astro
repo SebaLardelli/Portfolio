@@ -1,0 +1,29 @@
+---
+import { profile } from "../data/profile";
+
+const channels = [
+  profile.email
+    ? { href: `mailto:${profile.email}`, text: profile.email }
+    : null,
+  profile.phone ? { href: `tel:+543464440119`, text: profile.phone } : null,
+  profile.github
+    ? { href: profile.github, text: "github.com/SebaLardelli" }
+    : null,
+  profile.linkedin ? { href: profile.linkedin, text: "LinkedIn" } : null,
+].filter((item) => item !== null);
+---
+
+<section class="section" id="contacto">
+  <div class="container prose">
+    <h2>Contacto</h2>
+    <ul class="contact-list">
+      {
+        channels.map((channel) => (
+          <li>
+            <a href={channel.href}>{channel.text}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
