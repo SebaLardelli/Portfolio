@@ -6,6 +6,43 @@ html {
   scroll-behavior: smooth;
 }
 
+.page-width {
+  width: 100%;
+  max-width: 46.25rem;
+}
+
+@media (min-width: 1024px) {
+  .page-width {
+    max-width: 58rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-width {
+    max-width: 70rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px;
+  }
+
+  .page-width {
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+
+  .page-width {
+    max-width: 90rem;
+  }
+}
+
 body {
   min-height: 100vh;
   color: rgba(17, 17, 17, 0.9);

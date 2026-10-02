@@ -9,7 +9,7 @@ export function Formation() {
         {formation.map((item) => (
           <li key={item.title}>
             <div className="flex flex-wrap items-center gap-2">
-              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <h3 className="text-lg font-semibold xl:text-xl">{item.title}</h3>
               {item.current ? (
                 <span className="rounded-full bg-yellow-400/15 px-2 py-0.5 text-xs font-medium text-yellow-700 dark:text-yellow-400">
                   En curso

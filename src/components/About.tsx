@@ -14,7 +14,7 @@ export function About() {
         <img
           src={profile.image}
           alt={`${profile.name}, desarrollador backend y full stack`}
-          className="size-40 rounded-full bg-black object-cover shadow-lg ring-2 ring-yellow-400/80"
+          className="size-40 rounded-full bg-black object-cover shadow-lg ring-2 ring-yellow-400/80 xl:size-52"
         />
       </div>
     </Section>

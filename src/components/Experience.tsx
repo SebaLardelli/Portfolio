@@ -14,7 +14,7 @@ export function Experience() {
               ) : null}
               <span className="relative size-3 rounded-full border-2 border-yellow-400 bg-white dark:bg-neutral-950" />
             </span>
-            <h3 className="text-lg font-semibold">{item.title}</h3>
+            <h3 className="text-lg font-semibold xl:text-xl">{item.title}</h3>
             <h4 className="text-sm font-medium text-yellow-600 dark:text-yellow-400">
               {item.company}
             </h4>

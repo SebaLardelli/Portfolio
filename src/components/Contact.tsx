@@ -30,7 +30,7 @@ export function Contact() {
       <p className="mb-6 text-pretty text-gray-600 dark:text-gray-300">
         Rosario, Santa Fe. Escribime, llamame o bajá el CV: las tres vías están acá.
       </p>
-      <ul className="grid gap-3 sm:grid-cols-1">
+      <ul className="grid gap-3 xl:grid-cols-3">
         {contacts.map((item) => (
           <li key={item.label}>
             <a
