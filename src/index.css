@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  font-family: "Onest Variable", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: rgba(17, 17, 17, 0.9);
+  background: #f6f3ed;
+}
+
+.dark body,
+:is(.dark) body {
+  color: rgba(255, 255, 255, 0.92);
+  background: #0c0b0a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.anim-fade-in {
+  animation: fade-in-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-delay-1 {
+  animation-delay: 120ms;
+}
+.anim-delay-2 {
+  animation-delay: 260ms;
+}
+.anim-delay-3 {
+  animation-delay: 400ms;
+}
+
+.gradient-name {
+  background: linear-gradient(135deg, #f59e0b 10%, #f97316 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-page {
+  background-color: #f6f3ed;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -18%, rgb(245 158 11 / 0.28), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 100% 0%, rgb(249 115 22 / 0.12), transparent 52%),
+    radial-gradient(ellipse 40% 35% at 0% 100%, rgb(245 158 11 / 0.08), transparent 50%);
+}
+
+.dark .bg-page {
+  background-color: #0c0b0a;
+  background-image:
+    radial-gradient(ellipse 100% 70% at 50% -22%, rgb(245 158 11 / 0.28), transparent 52%),
+    radial-gradient(ellipse 55% 48% at 92% 12%, rgb(249 115 22 / 0.16), transparent 55%),
+    radial-gradient(ellipse 50% 42% at 8% 92%, rgb(120 53 15 / 0.28), transparent 55%);
+}
