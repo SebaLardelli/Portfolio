@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
-import { profile } from "../data/profile";
+import { useI18n } from "../i18n/LanguageContext";
 import { CloseIcon, MenuIcon } from "./icons";
+import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
-
-const links = [
-  { href: "#proyectos", id: "proyectos", label: "Proyectos" },
-  { href: "#experiencia", id: "experiencia", label: "Experiencia" },
-  { href: "#habilidades", id: "habilidades", label: "Skills" },
-  { href: "#formacion", id: "formacion", label: "Formación" },
-  { href: "#sobre-mi", id: "sobre-mi", label: "Sobre mí" },
-  { href: "#contacto", id: "contacto", label: "Contacto" },
-];
 
 function linkClass(isActive: boolean, stacked = false) {
   return `rounded-full transition ${
@@ -23,8 +15,18 @@ function linkClass(isActive: boolean, stacked = false) {
 }
 
 export function Header() {
+  const { t } = useI18n();
   const [active, setActive] = useState("inicio");
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "#proyectos", id: "proyectos", label: t.ui.nav.projects },
+    { href: "#experiencia", id: "experiencia", label: t.ui.nav.experience },
+    { href: "#habilidades", id: "habilidades", label: t.ui.nav.skills },
+    { href: "#formacion", id: "formacion", label: t.ui.nav.formation },
+    { href: "#sobre-mi", id: "sobre-mi", label: t.ui.nav.about },
+    { href: "#contacto", id: "contacto", label: t.ui.nav.contact },
+  ];
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -70,7 +72,7 @@ export function Header() {
         <button
           type="button"
           className="fixed inset-0 z-40 bg-black/25 backdrop-blur-[2px] lg:hidden"
-          aria-label="Cerrar menú"
+          aria-label={t.ui.closeMenu}
           onClick={() => setOpen(false)}
         />
       ) : null}
@@ -82,7 +84,7 @@ export function Header() {
             className="min-w-0 truncate rounded-full px-2.5 py-2 text-[13px] font-semibold text-gray-800 sm:px-3 sm:text-sm lg:overflow-visible lg:whitespace-nowrap dark:text-white"
             onClick={() => setOpen(false)}
           >
-            {profile.name}
+            {t.profile.name}
           </a>
 
           <div className="hidden min-w-0 flex-1 items-center justify-evenly lg:flex">
@@ -104,11 +106,12 @@ export function Header() {
               className="rounded-full p-2 text-gray-700 lg:hidden dark:text-gray-200"
               aria-expanded={open}
               aria-controls="mobile-nav"
-              aria-label={open ? "Cerrar menú" : "Abrir menú"}
+              aria-label={open ? t.ui.closeMenu : t.ui.openMenu}
               onClick={() => setOpen((value) => !value)}
             >
               {open ? <CloseIcon /> : <MenuIcon />}
             </button>
+            <LanguageToggle />
             <ThemeToggle />
           </div>
         </nav>

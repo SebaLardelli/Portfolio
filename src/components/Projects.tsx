@@ -1,4 +1,4 @@
-import { projects } from "../data/profile";
+import { useI18n } from "../i18n/LanguageContext";
 import { CheckIcon, CodeIcon, ExternalLinkIcon, GithubIcon } from "./icons";
 import { Section } from "./Section";
 
@@ -9,10 +9,12 @@ const positionClass: Record<string, string> = {
 };
 
 export function Projects() {
+  const { t } = useI18n();
+
   return (
-    <Section id="proyectos" title="Proyectos" icon={<CodeIcon />}>
+    <Section id="proyectos" title={t.ui.sections.projects} icon={<CodeIcon />}>
       <ul className="flex flex-col gap-16">
-        {projects.map((project) => (
+        {t.projects.map((project) => (
           <li
             key={project.title}
             className={`grid items-start gap-6 ${project.image ? "sm:grid-cols-[1fr_1.05fr]" : ""}`}
@@ -22,7 +24,7 @@ export function Projects() {
                 <a href={project.demo} target="_blank" rel="noreferrer" className="block">
                   <img
                     src={project.image}
-                    alt={project.imageAlt ?? `Captura de ${project.title}`}
+                    alt={project.imageAlt ?? project.title}
                     className={`w-full rounded-xl border border-black/10 bg-black shadow-lg transition hover:scale-[1.01] dark:border-white/10 ${project.imageFit === "contain" ? "object-contain" : "object-cover"} ${positionClass[project.imagePosition ?? "top"]}`}
                     style={{ aspectRatio: project.imageAspect ?? "16/10" }}
                   />
@@ -30,7 +32,7 @@ export function Projects() {
               ) : (
                 <img
                   src={project.image}
-                  alt={project.imageAlt ?? `Captura de ${project.title}`}
+                  alt={project.imageAlt ?? project.title}
                   className={`w-full rounded-xl border border-black/10 bg-black shadow-lg dark:border-white/10 ${project.imageFit === "contain" ? "object-contain" : "object-cover"} ${positionClass[project.imagePosition ?? "top"]}`}
                   style={{ aspectRatio: project.imageAspect ?? "16/10" }}
                 />
@@ -72,7 +74,7 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <ExternalLinkIcon /> Abrir demo
+                    <ExternalLinkIcon /> {t.ui.openDemo}
                   </a>
                 ) : null}
                 {project.github ? (
@@ -82,7 +84,7 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <GithubIcon /> Repo
+                    <GithubIcon /> {t.ui.repo}
                   </a>
                 ) : null}
               </div>

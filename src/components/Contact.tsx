@@ -1,34 +1,37 @@
-import { profile } from "../data/profile";
+import { useI18n } from "../i18n/LanguageContext";
 import { FileIcon, MailIcon, PhoneIcon } from "./icons";
 import { Section } from "./Section";
 
-const contacts = [
-  {
-    label: "Email",
-    value: profile.email,
-    href: `mailto:${profile.email}`,
-    icon: <MailIcon className="size-6" />,
-  },
-  {
-    label: "Teléfono",
-    value: profile.phone,
-    href: `tel:${profile.phone.replace(/\s/g, "")}`,
-    icon: <PhoneIcon className="size-6" />,
-  },
-  {
-    label: "Currículum",
-    value: "Descargar CV (PDF)",
-    href: profile.cv,
-    icon: <FileIcon className="size-6" />,
-    download: "Sebastian-Lardelli-CV.pdf",
-  },
-];
-
 export function Contact() {
+  const { t } = useI18n();
+  const { profile } = t;
+
+  const contacts = [
+    {
+      label: t.ui.contactEmail,
+      value: profile.email,
+      href: `mailto:${profile.email}`,
+      icon: <MailIcon className="size-6" />,
+    },
+    {
+      label: t.ui.contactPhone,
+      value: profile.phone,
+      href: `tel:${profile.phone.replace(/\s/g, "")}`,
+      icon: <PhoneIcon className="size-6" />,
+    },
+    {
+      label: t.ui.contactCv,
+      value: t.ui.downloadCv,
+      href: profile.cv,
+      icon: <FileIcon className="size-6" />,
+      download: "Sebastian-Lardelli-CV.pdf",
+    },
+  ];
+
   return (
-    <Section id="contacto" title="Contacto" icon={<MailIcon />}>
+    <Section id="contacto" title={t.ui.sections.contact} icon={<MailIcon />}>
       <p className="mb-6 text-pretty text-gray-600 dark:text-gray-300">
-        Rosario, Santa Fe. Escribime, llamame o bajá el CV: las tres vías están acá.
+        {t.ui.contactIntro}
       </p>
       <ul className="grid gap-3 xl:grid-cols-3">
         {contacts.map((item) => (

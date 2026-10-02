@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useI18n } from "../i18n/LanguageContext";
 
 type SocialPillProps = {
   href: string;
@@ -47,7 +48,8 @@ export function PulseBadge({
 }
 
 export function AvailabilityBadge() {
-  return <PulseBadge tone="green">Disponible para trabajar</PulseBadge>;
+  const { t } = useI18n();
+  return <PulseBadge tone="green">{t.ui.available}</PulseBadge>;
 }
 
 export function CredentialLink({

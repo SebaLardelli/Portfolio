@@ -1,0 +1,58 @@
+import {
+  about,
+  experience,
+  formation,
+  profile,
+  projects,
+  skillGroups,
+} from "../data/profile";
+import type { Copy } from "./types";
+
+export const es: Copy = {
+  profile,
+  experience,
+  formation,
+  skillGroups,
+  projects,
+  about,
+  ui: {
+    greeting: "Hey, soy",
+    available: "Disponible para trabajar",
+    photoAlt: `${profile.name}, desarrollador backend y full stack`,
+    openCalcomania: "Abrir CalcoMania",
+    playMusicmania: "Jugar MusicMania",
+    contactMe: "Contáctame",
+    openDemo: "Abrir demo",
+    repo: "Repo",
+    inProgress: "En curso",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
+    switchLang: "Switch to English",
+    themeLight: "Activar tema claro",
+    themeDark: "Activar tema oscuro",
+    pageTitle: "Sebastián Lardelli | Desarrollador Backend — Ingeniería en Sistemas, PHP, Node.js",
+    pageDescription:
+      "Desarrollador de software en Rosario. Últimos años de Ingeniería en Sistemas Informáticos (UAI). APIs REST en PHP Slim y Node.js, Express y TypeScript. E-commerce en producción, autenticación JWT, Docker, RAG e IA. Portfolio de Sebastián Lardelli.",
+    contactIntro: "Rosario, Santa Fe. Escribime, llamame o bajá el CV: las tres vías están acá.",
+    contactEmail: "Email",
+    contactPhone: "Teléfono",
+    contactCv: "Currículum",
+    downloadCv: "Descargar CV (PDF)",
+    nav: {
+      projects: "Proyectos",
+      experience: "Experiencia",
+      skills: "Skills",
+      formation: "Formación",
+      about: "Sobre mí",
+      contact: "Contacto",
+    },
+    sections: {
+      projects: "Proyectos",
+      experience: "Experiencia",
+      skills: "Habilidades",
+      formation: "Formación",
+      about: "Sobre mí",
+      contact: "Contacto",
+    },
+  },
+};

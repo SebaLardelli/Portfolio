@@ -1,12 +1,14 @@
-import { experience } from "../data/profile";
+import { useI18n } from "../i18n/LanguageContext";
 import { BriefcaseIcon, CheckIcon } from "./icons";
 import { Section } from "./Section";
 
 export function Experience() {
+  const { t } = useI18n();
+
   return (
-    <Section id="experiencia" title="Experiencia" icon={<BriefcaseIcon />}>
+    <Section id="experiencia" title={t.ui.sections.experience} icon={<BriefcaseIcon />}>
       <ol className="relative ml-1 border-s border-gray-200 dark:border-gray-800">
-        {experience.map((item) => (
+        {t.experience.map((item) => (
           <li key={`${item.company}-${item.title}`} className="relative ms-6 mb-10 last:mb-0">
             <span className="absolute top-1.5 -start-[1.45rem] flex size-3.5 items-center justify-center">
               {item.current ? (

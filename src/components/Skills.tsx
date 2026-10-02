@@ -1,12 +1,14 @@
-import { skillGroups } from "../data/profile";
+import { useI18n } from "../i18n/LanguageContext";
 import { CodeIcon } from "./icons";
 import { Section } from "./Section";
 
 export function Skills() {
+  const { t } = useI18n();
+
   return (
-    <Section id="habilidades" title="Habilidades" icon={<CodeIcon />}>
+    <Section id="habilidades" title={t.ui.sections.skills} icon={<CodeIcon />}>
       <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {skillGroups.map((group) => (
+        {t.skillGroups.map((group) => (
           <div key={group.label}>
             <dt className="mb-3 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
               {group.label}

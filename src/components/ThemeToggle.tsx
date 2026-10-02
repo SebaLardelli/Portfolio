@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useI18n } from "../i18n/LanguageContext";
 import { MoonIcon, SunIcon } from "./icons";
 
 function applyTheme(dark: boolean) {
@@ -7,6 +8,7 @@ function applyTheme(dark: boolean) {
 }
 
 export function ThemeToggle() {
+  const { t } = useI18n();
   const [dark, setDark] = useState(() =>
     document.documentElement.classList.contains("dark")
   );
@@ -19,7 +21,7 @@ export function ThemeToggle() {
     <button
       type="button"
       className="rounded-full p-2 text-gray-600 transition hover:scale-110 dark:text-gray-300"
-      aria-label={dark ? "Activar tema claro" : "Activar tema oscuro"}
+      aria-label={dark ? t.ui.themeLight : t.ui.themeDark}
       onClick={() => setDark((value) => !value)}
     >
       {dark ? <SunIcon /> : <MoonIcon />}

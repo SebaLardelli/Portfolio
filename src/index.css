@@ -59,6 +59,11 @@ body {
   html {
     scroll-behavior: auto;
   }
+
+  .photo-neon-ring {
+    animation: none;
+    background: conic-gradient(from 140deg, #fbbf24, #fb923c, #fde68a, #fbbf24);
+  }
 }
 
 @keyframes fade-in-up {
@@ -91,6 +96,36 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.photo-neon {
+  position: relative;
+  display: inline-block;
+}
+
+.photo-neon-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 220deg,
+    #fbbf24 270deg,
+    #fb923c 300deg,
+    #fde68a 330deg,
+    transparent 360deg
+  );
+  animation: photo-neon-spin 2.8s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.95)) drop-shadow(0 0 16px rgba(249, 115, 22, 0.55));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.4px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.4px));
+  pointer-events: none;
+}
+
+@keyframes photo-neon-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .bg-page {

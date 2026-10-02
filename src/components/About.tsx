@@ -1,21 +1,26 @@
-import { about, profile } from "../data/profile";
 import { UserIcon } from "./icons";
 import { Section } from "./Section";
+import { useI18n } from "../i18n/LanguageContext";
 
 export function About() {
+  const { t } = useI18n();
+
   return (
-    <Section id="sobre-mi" title="Sobre mí" icon={<UserIcon />}>
+    <Section id="sobre-mi" title={t.ui.sections.about} icon={<UserIcon />}>
       <div className="grid items-start gap-8 sm:grid-cols-[1.2fr_auto]">
         <div className="space-y-4 text-pretty leading-relaxed text-gray-600 dark:text-gray-300">
-          {about.map((paragraph) => (
+          {t.about.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <img
-          src={profile.image}
-          alt={`${profile.name}, desarrollador backend y full stack`}
-          className="size-40 rounded-full bg-black object-cover shadow-lg ring-2 ring-yellow-400/80 xl:size-52"
-        />
+        <div className="photo-neon size-40 justify-self-center xl:size-52">
+          <span className="photo-neon-ring" aria-hidden="true" />
+          <img
+            src={t.profile.image}
+            alt={t.ui.photoAlt}
+            className="relative z-10 size-full rounded-full bg-black object-cover shadow-lg"
+          />
+        </div>
       </div>
     </Section>
   );

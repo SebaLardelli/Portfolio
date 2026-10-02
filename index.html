@@ -16,6 +16,12 @@
         if (stored === "dark" || (!stored && prefersDark)) {
           document.documentElement.classList.add("dark");
         }
+        var locale = localStorage.getItem("locale");
+        if (locale === "en" || locale === "es") {
+          document.documentElement.lang = locale;
+        } else if (navigator.language && navigator.language.toLowerCase().indexOf("en") === 0) {
+          document.documentElement.lang = "en";
+        }
       })();
     </script>
   </head>
