@@ -6,8 +6,10 @@ import { Section } from "./Section";
 function ProjectShot({ project, priority }: { project: ProjectItem; priority?: boolean }) {
   if (!project.image) return null;
 
-  const maxWidth = project.imageWidth ?? 1400;
-  const tall = (project.imageHeight ?? 0) > (project.imageWidth ?? 0);
+  const sourceW = project.imageWidth ?? 1600;
+  const sourceH = project.imageHeight ?? 1000;
+  const tall = sourceH / sourceW > 1.15;
+  const displayMax = tall ? Math.min(920, sourceW) : Math.min(1360, sourceW);
 
   const image = (
     <img
@@ -19,16 +21,16 @@ function ProjectShot({ project, priority }: { project: ProjectItem; priority?: b
       decoding="async"
       className={`project-shot ${project.imageFit === "contain" ? "object-contain" : ""}`}
       style={{
-        maxWidth: `min(100%, ${maxWidth}px)`,
-        maxHeight: tall || project.imageFit === "contain" ? "min(52rem, 82vh)" : undefined,
+        maxWidth: `min(100%, ${displayMax}px)`,
+        maxHeight: tall || project.imageFit === "contain" ? "min(58rem, 86vh)" : undefined,
       }}
     />
   );
 
   return (
     <figure
-      className={`project-frame mx-auto w-full ${tall ? "max-w-[44rem]" : ""}`}
-      style={{ maxWidth: tall ? undefined : `min(100%, ${maxWidth}px)` }}
+      className="project-frame mx-auto w-full"
+      style={{ maxWidth: `min(100%, ${displayMax}px)` }}
     >
       {project.demo ? (
         <a href={project.demo} target="_blank" rel="noreferrer" className="block">
