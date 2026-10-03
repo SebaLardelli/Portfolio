@@ -42,7 +42,8 @@ export const en: Copy = {
       description:
         "Personal business live at calcoomaniaa.com, built from scratch as a formal venture — not a class exercise. REST API with PHP Slim, MySQL, JWT, and Apache. Visitors buy; the admin runs the catalog.",
       highlights: [
-        "Built from zero with analysis and design documentation: elicitation, requirements, diagrams, and a prototype before going to production.",
+        "Built from zero with analysis and design documentation: elicitation, requirements, Draw.io diagrams, Whimsical and Figma mockups/wireframes, and a prototype before going to production.",
+        "MVC architecture and client-server communication: the front consumes the REST API.",
         "Authentication with JWT, user and admin roles, email validation, password hashing, and OTP recovery (6 digits, 15 minutes, single use).",
         "Session and cart in HTTP cookies, not localStorage. Checkout with a pickup point and up to two payment methods (cash and bank transfer) whose amounts must match the total.",
         "CRUD for products, categories, themes, stock (sold out at zero), pickup points, and payment methods. Images on the server and transactional emails.",
@@ -82,14 +83,14 @@ export const en: Copy = {
       place: "Universidad Abierta Interamericana",
       period: "Final years",
       detail:
-        "Undergraduate degree. In Web Development and Middleware I am learning the MERN stack with TypeScript: REST APIs in Express 5, MongoDB, Zod, and authentication.",
+        "Undergraduate degree. In Web Development and Middleware I am learning the MERN stack with TypeScript: REST APIs in Express 5, MongoDB, Zod, and authentication. In Software Engineering I am using and learning design patterns (creational, structural, and behavioral) and architectural patterns such as MVC and client-server communication.",
     },
     {
       ...formationEs[1],
       title: "Higher Technician in Software Development",
       place: "Instituto Zona Oeste",
       detail:
-        "Technician diploma. Analysis and design (elicitation, requirements, diagrams, mockups, and prototypes) and development: CalcoMania, the VB.NET desktop app, and the Kathará labs.",
+        "Technician diploma. Analysis and design (elicitation, requirements, Draw.io diagrams, Whimsical and Figma mockups/wireframes, and prototypes) and development: CalcoMania, the VB.NET desktop app, and the Kathará labs. In Software Engineering 2 and in the diploma project I used creational, structural, and behavioral design patterns. I also managed test cases in TestLink: requirements, steps, expected result, and execution, plus black-box, white-box, and gray-box techniques, spreadsheets, bug reports, basis-path testing, and cyclomatic complexity.",
     },
     {
       ...formationEs[2],
@@ -124,15 +125,36 @@ export const en: Copy = {
         "Mockups",
         "Prototyping",
         "Documentation",
+        "Whimsical",
+        "Figma",
+        "Draw.io",
+        "Creational patterns",
+        "Structural patterns",
+        "Behavioral patterns",
+        "MVC",
+        "Client-server",
+      ],
+    },
+    {
+      label: "Testing",
+      items: [
+        "TestLink",
+        "Black-box",
+        "White-box",
+        "Gray-box",
+        "Test cases",
+        "Basis path",
+        "Cyclomatic complexity",
+        "Bug reports",
       ],
     },
     {
       label: "AI and automation",
-      items: skillGroupsEs[3].items,
+      items: skillGroupsEs[4].items,
     },
     {
       label: "Infra and networks",
-      items: skillGroupsEs[4].items.map((item) => {
+      items: skillGroupsEs[5].items.map((item) => {
         if (item === "Ruteo estático") return "Static routing";
         if (item === "Ruteo dinámico") return "Dynamic routing";
         return item;
@@ -145,7 +167,8 @@ export const en: Copy = {
       description:
         "A formal personal venture: a real e-commerce on its own domain (calcoomaniaa.com), built entirely from scratch. Not a demo and not a homework upload — the business is in production. REST API in PHP Slim, MySQL, and JWT; catalog, cart, checkout, authentication, and an admin panel. Session and cart go through cookies.",
       highlights: [
-        "Own business documented end to end: elicitation, requirements specification, diagrams, mockups, and a prototype before implementing the system that runs the store today.",
+        "Own business documented end to end: elicitation, requirements specification, Draw.io diagrams, Whimsical and Figma mockups/wireframes, and a prototype before implementing the system that runs the store today.",
+        "MVC architecture and client-server communication between the client and the REST API.",
         "Real purchase flow: filters by category and theme, custom stickers, cart, order history, pickup point, and up to two payment methods per order (cash and bank transfer).",
         "Backoffice with roles: the admin CRUDs products, categories, themes, pickup points, and payment methods. Stock decreases on sale and becomes Sold out at zero.",
         "Security: sign-up with email validation, login, logout, password hashing, and one-time OTP (6 digits, 15 min). Images in /uploads and transactional emails.",
@@ -173,7 +196,7 @@ export const en: Copy = {
         "Three layers in the same system: WinForms screens, class modules, and SQL Server persistence.",
         "CRUD for customers, garments, brands, and payment methods; new sale and queries by date.",
         "Login and sign-up. Price list and invoice/ticket print or export with ReportViewer (RDLC).",
-        "The same analysis cycle from the program: requirements, diagrams, and a desktop prototype before shipping the system.",
+        "The same analysis cycle from the program: requirements, diagrams, and a desktop prototype before shipping the system. In the diploma project I applied creational, structural, and behavioral design patterns.",
       ],
       imageAlt: "VB.NET sales system: main menu with customers, garments, brands, payments, and sales",
     },
@@ -205,7 +228,7 @@ export const en: Copy = {
   about: [
     "I am from Villa Mugueta, Santa Fe, and I live in Rosario: I moved here to study and I am here now. Higher Technician in Software Development (Instituto Zona Oeste, 2023–2025) and now in the final years of Computer Systems Engineering at UAI. I am taking English at Eklab Institute, A2+ level. My main search is a junior role focused on AI integrations, with a backend or full-stack base: REST APIs, authentication, data, and a product I can explain end to end.",
     "CalcoMania is my venture: a formal personal business, built from scratch, with analysis documentation and the system in production (Slim, MySQL, JWT, cookies, catalog, cart, checkout, and admin). AI_Agro is the project from the UTN Artificial Intelligence course: the grower talks on Telegram and the bot answers with diagnosis, forecast, RAG, and audio. At IZO I also shipped a VB.NET desktop app (sales, SQL Server, and a ReportViewer ticket) and static and dynamic routing labs in Kathará. MusicMania is published and playable.",
-    "I do not start with the code. I do elicitation, requirements specification, diagrams, mockups, and prototypes, and only then I implement. At UAI, in Web Development and Middleware, I am learning the MERN stack with TypeScript: Express, MongoDB, Zod, and bcrypt. CalcoMania's JWT is already there; the one for this course is built in Auth II. I want a team where that can be defended in an interview, not only listed on a CV.",
+    "I do not start with the code. I do elicitation, requirements specification, Draw.io diagrams, Whimsical and Figma mockups/wireframes, and only then I implement. In Software Engineering 2 (IZO) and in the diploma project I used creational, structural, and behavioral design patterns. In CalcoMania I applied MVC and client-server communication. I am using and learning those same patterns now at UAI, in Software Engineering. I also used TestLink to manage test cases: requirement, preconditions, steps, expected result, and execution, plus black-box, white-box, and gray-box, basis-path testing, cyclomatic complexity, and bug reports. In Web Development and Middleware I am learning the MERN stack with TypeScript: Express, MongoDB, Zod, and bcrypt. CalcoMania's JWT is already there; the one for this course is built in Auth II. I want a team where that can be defended in an interview, not only listed on a CV.",
     "As a plus, I am currently learning robotics: Arduino in Tinkercad, hands-on labs at university, and a project ahead. I also practice drone flying in a simulator, Uncrashed FPV.",
   ],
   ui: {

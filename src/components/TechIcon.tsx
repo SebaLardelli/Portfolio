@@ -1,4 +1,5 @@
 import type { ReactNode, SVGProps } from "react";
+import { publicUrl } from "../utils/publicUrl";
 
 type TechIconProps = {
   name: string;
@@ -56,6 +57,42 @@ const ALIAS: Record<string, string> = {
   prototyping: "proto",
   documentacion: "docs",
   documentation: "docs",
+  whimsical: "whimsical",
+  figma: "figma",
+  "draw.io": "drawio",
+  drawio: "drawio",
+  "patrones creacionales": "creational",
+  "creational patterns": "creational",
+  "patrones estructurales": "structural",
+  "structural patterns": "structural",
+  "patrones de comportamiento": "behavioral",
+  "behavioral patterns": "behavioral",
+  mvc: "mvc",
+  "cliente-servidor": "clientserver",
+  "cliente servidor": "clientserver",
+  "client-server": "clientserver",
+  "client server": "clientserver",
+  "caja negra": "blackbox",
+  "black-box": "blackbox",
+  "black box": "blackbox",
+  blackbox: "blackbox",
+  "caja blanca": "whitebox",
+  "white-box": "whitebox",
+  "white box": "whitebox",
+  whitebox: "whitebox",
+  "caja gris": "graybox",
+  "gray-box": "graybox",
+  "gray box": "graybox",
+  graybox: "graybox",
+  "casos de prueba": "testcases",
+  "test cases": "testcases",
+  testlink: "testlink",
+  "ruta basica": "basispath",
+  "basis path": "basispath",
+  "complejidad ciclomatica": "cyclo",
+  "cyclomatic complexity": "cyclo",
+  "reporte de bugs": "bugs",
+  "bug reports": "bugs",
   "gemini vision": "gemini",
   rag: "rag",
   openai: "openai",
@@ -399,6 +436,157 @@ const ICONS: Record<string, { color: string; node: (color: string, className?: s
       </Mark>
     ),
   },
+  figma: {
+    color: "#F24E1E",
+    node: (c, className) => (
+      <Mark color={c} className={className}>
+        <path d="M8 2.5h4v4.8H8A2.4 2.4 0 1 1 8 2.5Z" />
+        <path fill="#A259FF" d="M12 2.5h4a2.4 2.4 0 1 1 0 4.8h-4V2.5Z" />
+        <path fill="#1ABCFE" d="M16.4 9.7A2.4 2.4 0 1 1 12 12V7.3h4.4Z" />
+        <path fill="#0ACF83" d="M8 16.9a2.4 2.4 0 0 0 2.4-2.4V12H8a2.4 2.4 0 0 0 0 4.9Z" />
+        <path fill="#FF7262" d="M8 12h4V7.3H8A2.4 2.4 0 0 0 8 12Z" />
+      </Mark>
+    ),
+  },
+  whimsical: {
+    color: "#5C4EE5",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <path d="M5 8.5 12 4l7 4.5v7L12 20l-7-4.5v-7Z" />
+        <path d="M12 12 5 8.5M12 12l7-3.5M12 12v8" />
+      </Mark>
+    ),
+  },
+  drawio: {
+    color: "#F08705",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="3.5" y="4" width="7" height="6" rx="1" />
+        <rect x="13.5" y="14" width="7" height="6" rx="1" />
+        <path d="M10.5 7h3.2c1.4 0 2.3.9 2.3 2.2V14" />
+      </Mark>
+    ),
+  },
+  creational: {
+    color: "#0f766e",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <circle cx="8" cy="12" r="2.2" />
+        <circle cx="16" cy="8" r="2.2" />
+        <circle cx="16" cy="16" r="2.2" />
+        <path d="M10 12h3.4M14.2 9.4 12.2 11.2M14.2 14.6 12.2 12.8" />
+      </Mark>
+    ),
+  },
+  structural: {
+    color: "#0f766e",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="4" y="5" width="6" height="6" rx="1" />
+        <rect x="14" y="5" width="6" height="6" rx="1" />
+        <rect x="9" y="14" width="6" height="6" rx="1" />
+        <path d="M10 11v3M17 11v3" />
+      </Mark>
+    ),
+  },
+  behavioral: {
+    color: "#0f766e",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <circle cx="7" cy="8" r="2" />
+        <circle cx="17" cy="8" r="2" />
+        <circle cx="12" cy="17" r="2" />
+        <path d="M9 8h6M8.2 9.8 10.8 15.2M15.8 9.8 13.2 15.2" />
+      </Mark>
+    ),
+  },
+  mvc: {
+    color: "#0369a1",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="4" y="4" width="16" height="5" rx="1" />
+        <rect x="4" y="10.5" width="7" height="9" rx="1" />
+        <rect x="13" y="10.5" width="7" height="9" rx="1" />
+      </Mark>
+    ),
+  },
+  clientserver: {
+    color: "#0369a1",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="3" y="5" width="7" height="5" rx="1" />
+        <rect x="14" y="14" width="7" height="5" rx="1" />
+        <path d="M10 7.5h3.2c1.5 0 2.3.8 2.3 2.2V14" />
+      </Mark>
+    ),
+  },
+  blackbox: {
+    color: "#334155",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="4" y="6" width="16" height="12" rx="1.5" />
+        <path d="M4 10h16" />
+      </Mark>
+    ),
+  },
+  whitebox: {
+    color: "#64748b",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="4" y="6" width="16" height="12" rx="1.5" />
+        <path d="M8 10h8M8 14h5" />
+      </Mark>
+    ),
+  },
+  graybox: {
+    color: "#78716c",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="4" y="6" width="16" height="12" rx="1.5" />
+        <path d="M12 6v12M8 14h3" />
+      </Mark>
+    ),
+  },
+  testcases: {
+    color: "#0f766e",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <rect x="5" y="3.5" width="14" height="17" rx="1.5" />
+        <path d="M8 8h8M8 12h8M8 16h5" />
+      </Mark>
+    ),
+  },
+  basispath: {
+    color: "#2563eb",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <circle cx="6" cy="6" r="2" />
+        <circle cx="18" cy="12" r="2" />
+        <circle cx="6" cy="18" r="2" />
+        <path d="M8 7.2 16 11.2M8 16.8 16 12.8M6 8v8" />
+      </Mark>
+    ),
+  },
+  cyclo: {
+    color: "#7c3aed",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <circle cx="12" cy="6" r="2" />
+        <circle cx="6" cy="16" r="2" />
+        <circle cx="18" cy="16" r="2" />
+        <path d="M11 8 7.4 14.2M13 8l3.6 6.2M8 16h8" />
+      </Mark>
+    ),
+  },
+  bugs: {
+    color: "#b91c1c",
+    node: (c, className) => (
+      <Mark color={c} className={className} filled={false}>
+        <ellipse cx="12" cy="13" rx="4" ry="5" />
+        <path d="M12 8V5M8 10 5.5 8M16 10l2.5-2M8 13H5M16 13h3M8 16l-2.5 2M16 16l2.5 2" />
+      </Mark>
+    ),
+  },
   docs: {
     color: "#d97706",
     node: (c, className) => (
@@ -550,8 +738,23 @@ const ICONS: Record<string, { color: string; node: (color: string, className?: s
   },
 };
 
+const IMAGE_ICONS: Record<string, string> = {
+  testlink: publicUrl("/logos/testlink.png"),
+};
+
 export function TechIcon({ name, className = "size-4 shrink-0", branded = true }: TechIconProps) {
   const key = ALIAS[normalize(name)];
+  const image = key ? IMAGE_ICONS[key] : undefined;
+  if (image) {
+    return (
+      <img
+        src={image}
+        alt=""
+        aria-hidden="true"
+        className={`${className} object-contain`}
+      />
+    );
+  }
   const icon = key ? ICONS[key] : undefined;
   if (!icon) return null;
   const color = branded ? icon.color : "currentColor";

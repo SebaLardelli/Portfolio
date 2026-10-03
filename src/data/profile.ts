@@ -64,7 +64,8 @@ export const experience: ExperienceItem[] = [
     description:
       "Negocio personal en calcoomaniaa.com, montado desde cero como emprendimiento formal: no es una práctica de clase. API REST con PHP Slim, MySQL, JWT y Apache. El visitante compra; el admin opera el catálogo.",
     highlights: [
-      "Levantado de 0 con documentación de análisis y diseño: elicitación, requerimientos, diagramas y prototipo antes de pasar a producción.",
+      "Levantado de 0 con documentación de análisis y diseño: elicitación, requerimientos, diagramas en Draw.io, mockups y wireframes en Whimsical y Figma, y prototipo antes de pasar a producción.",
+      "Arquitectura MVC y comunicación cliente-servidor: el front consume la API REST.",
       "Autenticación con JWT, roles de usuario y administrador, validación de correo, hash de contraseñas y recuperación por OTP (6 dígitos, 15 minutos, un solo uso).",
       "Sesión y carrito con cookies HTTP, no localStorage. Checkout con punto de retiro y hasta dos medios de pago (efectivo y transferencia) cuyos montos tienen que cerrar el total.",
       "CRUD de productos, categorías, temáticas, stock (pasa a Agotado en cero), puntos de retiro y métodos de pago. Imágenes en el servidor y mails transaccionales.",
@@ -117,14 +118,14 @@ export const formation: FormationItem[] = [
     period: "Últimos años",
     current: true,
     detail:
-      "Carrera de grado. En Desarrollo y Middleware Web estoy aprendiendo el stack MERN con TypeScript: APIs REST en Express 5, MongoDB, Zod y autenticación.",
+      "Carrera de grado. En Desarrollo y Middleware Web estoy aprendiendo el stack MERN con TypeScript: APIs REST en Express 5, MongoDB, Zod y autenticación. En Ingeniería del Software estoy usando y aprendiendo patrones de diseño (creacionales, estructurales y de comportamiento) y patrones arquitectónicos como MVC y comunicación cliente-servidor.",
   },
   {
     title: "Tecnicatura Superior en Desarrollo de Software",
     place: "Instituto Zona Oeste",
     period: "2023 — 2025",
     detail:
-      "Título de técnico. Análisis y diseño (elicitación, requerimientos, diagramas, mockups y prototipos) y desarrollo: CalcoMania, la app de escritorio en VB.NET y los laboratorios Kathará.",
+      "Título de técnico. Análisis y diseño (elicitación, requerimientos, diagramas en Draw.io, mockups y wireframes en Whimsical y Figma, y prototipos) y desarrollo: CalcoMania, la app de escritorio en VB.NET y los laboratorios Kathará. En Ingeniería de Software 2 y en el trabajo de diploma usé patrones de diseño creacionales, estructurales y de comportamiento. También gestioné casos de prueba en TestLink: requerimientos, pasos, resultado esperado y ejecución, más técnicas de caja negra, blanca y gris, planillas, reporte de bugs, ruta básica y complejidad ciclomática.",
   },
   {
     title: "Curso de Inteligencia Artificial",
@@ -191,6 +192,27 @@ export const skillGroups: SkillGroup[] = [
       "Mockups",
       "Prototipado",
       "Documentación",
+      "Whimsical",
+      "Figma",
+      "Draw.io",
+      "Patrones creacionales",
+      "Patrones estructurales",
+      "Patrones de comportamiento",
+      "MVC",
+      "Cliente-servidor",
+    ],
+  },
+  {
+    label: "Testing",
+    items: [
+      "TestLink",
+      "Caja negra",
+      "Caja blanca",
+      "Caja gris",
+      "Casos de prueba",
+      "Ruta básica",
+      "Complejidad ciclomática",
+      "Reporte de bugs",
     ],
   },
   {
@@ -256,7 +278,8 @@ export const projects: ProjectItem[] = [
     description:
       "Emprendimiento personal formal: un e-commerce real, con dominio propio (calcoomaniaa.com), montado completamente desde cero. No es una demo ni un TP colgado: es el negocio en producción. API REST en PHP Slim, MySQL y JWT; catálogo, carrito, checkout, autenticación y panel. La sesión y el carrito van por cookies.",
     highlights: [
-      "Negocio propio documentado de punta a punta: elicitación, especificación de requerimientos, diagramas, mockups y prototipo antes de implementar el sistema que hoy opera la tienda.",
+      "Negocio propio documentado de punta a punta: elicitación, especificación de requerimientos, diagramas en Draw.io, mockups y wireframes en Whimsical y Figma, y prototipo antes de implementar el sistema que hoy opera la tienda.",
+      "Arquitectura MVC y comunicación cliente-servidor entre el cliente y la API REST.",
       "Compra real: filtros por categoría y temática, calcos personalizadas, carrito, mis compras, punto de retiro y hasta dos medios de pago por compra (efectivo y transferencia).",
       "Backoffice con roles: el admin hace CRUD de productos, categorías, temáticas, puntos de retiro y métodos de pago. El stock se descuenta al vender y pasa a Agotado en cero.",
       "Seguridad: registro con validación de correo, login, cierre de sesión, hash de contraseñas y OTP de un solo uso (6 dígitos, 15 min). Imágenes en /uploads y mails transaccionales.",
@@ -297,7 +320,7 @@ export const projects: ProjectItem[] = [
       "Tres capas en el mismo sistema: pantallas WinForms, módulos de clases y persistencia en SQL Server.",
       "ABM de clientes, prendas, marcas y medios de pago; alta de venta y consultas por fecha.",
       "Login y registro. Lista de precios e impresión/exportación de factura (ticket) con ReportViewer (RDLC).",
-      "El mismo ciclo de análisis de la tecnicatura: requerimientos, diagramas y prototipo de escritorio antes de dejar el sistema andando.",
+      "El mismo ciclo de análisis de la tecnicatura: requerimientos, diagramas y prototipo de escritorio antes de dejar el sistema andando. En el trabajo de diploma apliqué patrones de diseño creacionales, estructurales y de comportamiento.",
     ],
     tags: [tag.vb, tag.winforms, tag.sqlserver],
     image: publicUrl("/projects/vb-ventas.png"),
@@ -349,6 +372,6 @@ export const projects: ProjectItem[] = [
 export const about = [
   "Soy de Villa Mugueta, Santa Fe, y vivo en Rosario: vine a estudiar y estoy acá ahora. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en Eklab Institute, nivel A2+. Mi búsqueda principal es un rol junior para dedicarme a integraciones con IA, con base de backend o full stack: APIs REST, autenticación, datos y un producto que se pueda explicar de punta a punta.",
   "CalcoMania es mi emprendimiento: un negocio personal formal, montado desde cero, con documentación de análisis y el sistema en producción (Slim, MySQL, JWT, cookies, catálogo, carrito, checkout y panel). AI_Agro es el proyecto del curso de Inteligencia Artificial de la UTN: el productor habla por Telegram y el bot responde con diagnóstico, pronóstico, RAG y audio. En IZO también dejé una app de escritorio en VB.NET (ventas, SQL Server y ticket con ReportViewer) y laboratorios de ruteo estático y dinámico en Kathará. MusicMania está publicado y se juega.",
-  "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas, mockups y prototipos, y recién ahí implemento. En la UAI, en Desarrollo y Middleware Web, estoy aprendiendo el stack MERN con TypeScript: Express, MongoDB, Zod y bcrypt. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
+  "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas en Draw.io, mockups y wireframes en Whimsical y Figma, y recién ahí implemento. En Ingeniería de Software 2 (IZO) y en el trabajo de diploma usé patrones de diseño creacionales, estructurales y de comportamiento. En CalcoMania apliqué MVC y comunicación cliente-servidor. Esos mismos patrones los estoy usando y aprendiendo ahora en la UAI, en Ingeniería del Software. También usé TestLink para gestionar casos de prueba: requerimiento, precondiciones, pasos, resultado esperado y ejecución, más caja negra, blanca y gris, ruta básica, complejidad ciclomática y reportes de bugs. En Desarrollo y Middleware Web estoy aprendiendo el stack MERN con TypeScript: Express, MongoDB, Zod y bcrypt. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
   "Como plus, ahora estoy aprendiendo robótica: Arduino en Tinkercad, prácticas reales en la facultad y un proyecto a futuro. También practico conducción de drone en simulador, en Uncrashed FPV.",
 ];
