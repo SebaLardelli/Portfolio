@@ -115,7 +115,18 @@ export const en: Copy = {
         item === "Autenticación" ? "Authentication" : item
       ),
     },
-    skillGroupsEs[1],
+    {
+      label: "Databases",
+      items: [
+        "Table normalization",
+        "Stored procedures",
+        "Functions",
+        "Transactions",
+        "SQL Server backup",
+        "Export to TXT and Excel",
+      ],
+    },
+    skillGroupsEs[2],
     {
       label: "Analysis and design",
       items: [
@@ -150,11 +161,11 @@ export const en: Copy = {
     },
     {
       label: "AI and automation",
-      items: skillGroupsEs[4].items,
+      items: skillGroupsEs[5].items,
     },
     {
       label: "Infra and networks",
-      items: skillGroupsEs[5].items.map((item) => {
+      items: skillGroupsEs[6].items.map((item) => {
         if (item === "Ruteo estático") return "Static routing";
         if (item === "Ruteo dinámico") return "Dynamic routing";
         return item;

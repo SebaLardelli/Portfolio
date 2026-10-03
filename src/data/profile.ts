@@ -180,6 +180,17 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
+    label: "Base de datos",
+    items: [
+      "Normalización de tablas",
+      "Procedimientos almacenados",
+      "Funciones",
+      "Transacciones",
+      "Backup en SQL Server",
+      "Exportar a TXT y Excel",
+    ],
+  },
+  {
     label: "Frontend",
     items: ["HTML5", "CSS3", "JavaScript", "React", "Flexbox", "CSS Grid", "Git"],
   },
