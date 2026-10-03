@@ -139,6 +139,37 @@ body {
   }
 }
 
+.project-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+.project-frame {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  background: #0a0a0a;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
+}
+
+.dark .project-frame {
+  border-color: rgb(255 255 255 / 0.1);
+  box-shadow: 0 18px 50px rgb(0 0 0 / 0.45);
+}
+
+@media (min-width: 1280px) {
+  .project-frame {
+    border-radius: 1.25rem;
+    box-shadow: 0 22px 60px rgb(0 0 0 / 0.22);
+  }
+
+  .dark .project-frame {
+    box-shadow: 0 28px 70px rgb(0 0 0 / 0.55);
+  }
+}
+
 .bg-page {
   background-color: #f6f3ed;
   background-image:

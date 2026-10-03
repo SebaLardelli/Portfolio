@@ -198,6 +198,8 @@ export type ProjectItem = {
   imagePosition?: string;
   imageAspect?: string;
   imageFit?: "cover" | "contain";
+  imageWidth?: number;
+  imageHeight?: number;
   imageAlt?: string;
   github?: string;
   demo?: string;
@@ -242,7 +244,8 @@ export const projects: ProjectItem[] = [
     tags: [tag.php, tag.slim, tag.mysql, tag.jwt, tag.rest],
     image: publicUrl("/projects/calcomania.png"),
     imagePosition: "center",
-    imageAspect: "21/10",
+    imageWidth: 1024,
+    imageHeight: 493,
     imageAlt: "CalcoMania: e-commerce en producción, catálogo de calcos con carrito y stock",
     demo: "https://www.calcoomaniaa.com",
   },
@@ -259,7 +262,8 @@ export const projects: ProjectItem[] = [
     tags: [tag.python, tag.flask, tag.gemini, tag.rag, tag.docker, tag.n8n, tag.telegram],
     image: publicUrl("/projects/ai-agro.png"),
     imagePosition: "top",
-    imageAspect: "3/4",
+    imageWidth: 692,
+    imageHeight: 939,
     imageAlt: "AI_Agro: chatbot de Telegram con pronóstico climático y análisis de foto de maíz",
     github: "https://github.com/SebaLardelli/AI_Agro",
     stackImageBelow: true,
@@ -290,6 +294,8 @@ export const projects: ProjectItem[] = [
     tags: [tag.html, tag.css, tag.js],
     image: publicUrl("/projects/musicmania.png"),
     imagePosition: "top",
+    imageWidth: 1400,
+    imageHeight: 875,
     imageAlt: "MusicMania: juego web publicado para adivinar canciones, HTML CSS y JavaScript",
     github: "https://github.com/SebaLardelli/MusicMania",
     demo: "https://sebalardelli.github.io/MusicMania/",
@@ -307,7 +313,8 @@ export const projects: ProjectItem[] = [
     image: publicUrl("/projects/esquema-conectividad.png"),
     imagePosition: "center",
     imageFit: "contain",
-    imageAspect: "1/1",
+    imageWidth: 2413,
+    imageHeight: 2425,
     imageAlt: "Esquema de conectividad Kathará: routers, costos de enlace y árbol de expansión",
     github: "https://github.com/IZO-Redes/2025-tp-final-SebaLardelli",
   },
