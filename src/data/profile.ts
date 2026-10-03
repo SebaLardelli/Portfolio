@@ -228,7 +228,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "IA y automatización",
-    items: ["Gemini Vision", "RAG", "OpenAI", "n8n", "Telegram", "Supabase", "Docker"],
+    items: ["Python", "Gemini Vision", "RAG", "n8n", "Supabase", "Docker"],
   },
   {
     label: "Infra y redes",
@@ -381,7 +381,7 @@ export const projects: ProjectItem[] = [
 ];
 
 export const about = [
-  "Soy de Villa Mugueta, Santa Fe, y vivo en Rosario: vine a estudiar y estoy acá ahora. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en Eklab Institute, nivel A2+. Mi búsqueda principal es un rol junior para dedicarme a integraciones con IA, con base de backend o full stack: APIs REST, autenticación, datos y un producto que se pueda explicar de punta a punta.",
+  "Soy de Villa Mugueta, Santa Fe, y actualmente resido en la ciudad de Rosario. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en Eklab Institute, nivel A2+. Mi búsqueda principal es un rol junior para dedicarme a integraciones con IA, con base de backend o full stack: APIs REST, autenticación, datos y un producto que se pueda explicar de punta a punta.",
   "CalcoMania es mi emprendimiento: un negocio personal formal, montado desde cero, con documentación de análisis y el sistema en producción (Slim, MySQL, JWT, cookies, catálogo, carrito, checkout y panel). AI_Agro es el proyecto del curso de Inteligencia Artificial de la UTN: el productor habla por Telegram y el bot responde con diagnóstico, pronóstico, RAG y audio. En IZO también dejé una app de escritorio en VB.NET (ventas, SQL Server y ticket con ReportViewer) y laboratorios de ruteo estático y dinámico en Kathará. MusicMania está publicado y se juega.",
   "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas en Draw.io, mockups y wireframes en Whimsical y Figma, y recién ahí implemento. En Ingeniería de Software 2 (IZO) y en el trabajo de diploma usé patrones de diseño creacionales, estructurales y de comportamiento. En CalcoMania apliqué MVC y comunicación cliente-servidor. Esos mismos patrones los estoy usando y aprendiendo ahora en la UAI, en Ingeniería del Software. También usé TestLink para gestionar casos de prueba: requerimiento, precondiciones, pasos, resultado esperado y ejecución, más caja negra, blanca y gris, ruta básica, complejidad ciclomática y reportes de bugs. En Desarrollo y Middleware Web estoy aprendiendo el stack MERN con TypeScript: Express, MongoDB, Zod y bcrypt. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
   "Como plus, ahora estoy aprendiendo robótica: Arduino en Tinkercad, prácticas reales en la facultad y un proyecto a futuro. También practico conducción de drone en simulador, en Uncrashed FPV.",

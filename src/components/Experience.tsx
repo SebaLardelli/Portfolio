@@ -7,7 +7,7 @@ export function Experience() {
 
   return (
     <Section id="experiencia" title={t.ui.sections.experience} icon={<BriefcaseIcon />}>
-      <ol className="relative ml-1 border-s border-gray-200 dark:border-gray-800">
+      <ol className="relative ml-1 before:absolute before:inset-y-0 before:-start-1.5 before:w-px before:bg-gray-200 dark:before:bg-gray-800">
         {t.experience.map((item) => (
           <li key={`${item.company}-${item.title}`} className="relative ms-6 mb-10 last:mb-0">
             <span className="absolute top-1.5 -start-[1.45rem] flex size-3.5 items-center justify-center">
