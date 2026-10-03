@@ -24,10 +24,6 @@ export function Cv() {
     };
   }, [t.ui.cv.pageTitle, t.ui.pageTitle]);
 
-  const extraProjects = t.projects.filter(
-    (project) => project.title !== "CalcoMania" && project.title !== "AI_Agro"
-  );
-
   return (
     <div className="cv-page bg-page min-h-screen">
       <div className="cv-toolbar cv-no-print sticky top-0 z-20 border-b border-black/10 bg-[#f6f3ed]/90 px-4 py-3 backdrop-blur-md dark:border-white/10 dark:bg-[#0c0b0a]/90">
@@ -70,6 +66,9 @@ export function Cv() {
               <a className="text-link" href={profile.github} target="_blank" rel="noreferrer">
                 {githubHandle(profile.github)}
               </a>
+              <a className="text-link" href={profile.linkedin} target="_blank" rel="noreferrer">
+                {profile.name}
+              </a>
               <a className="text-link" href={profile.calcomania} target="_blank" rel="noreferrer">
                 {siteHost(profile.calcomania)}
               </a>
@@ -79,6 +78,7 @@ export function Cv() {
 
         <CvSection title={t.ui.cv.profile}>
           <p className="text-pretty text-sm leading-relaxed text-gray-700 dark:text-gray-300">{profile.headline}</p>
+          <p className="mt-2 text-pretty text-sm leading-relaxed text-gray-600 dark:text-gray-400">{profile.summary}</p>
         </CvSection>
 
         <CvSection title={t.ui.cv.education}>
@@ -116,7 +116,7 @@ export function Cv() {
                 <p className="mt-0.5 text-pretty text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
                 {item.highlights ? (
                   <ul className="mt-1.5 list-disc space-y-1 pl-4 text-pretty text-sm text-gray-600 dark:text-gray-400">
-                    {item.highlights.slice(0, 2).map((line) => (
+                    {item.highlights.map((line) => (
                       <li key={line}>{line}</li>
                     ))}
                   </ul>
@@ -128,24 +128,22 @@ export function Cv() {
 
         <CvSection title={t.ui.cv.projects}>
           <ul className="space-y-3">
-            {extraProjects.map((project) => (
+            {t.projects.map((project) => (
               <li key={project.title}>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="text-sm font-semibold">{project.title}</h3>
                   <span className="text-xs text-gray-500">{project.tags.map((tag) => tag.name).join(" · ")}</span>
                 </div>
-                <p className="mt-0.5 text-pretty text-sm text-gray-600 dark:text-gray-400">
-                  {project.description.split(/(?<=\.)\s/)[0]}
-                </p>
-                <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-yellow-700 dark:text-yellow-400">
+                <p className="mt-0.5 text-pretty text-sm text-gray-600 dark:text-gray-400">{project.description}</p>
+                <p className="mt-1 flex flex-wrap gap-x-3 text-xs">
                   {project.demo ? (
                     <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
-                      {siteHost(project.demo)}
+                      {project.liveKind === "site" ? t.ui.openSite : t.ui.openDemo}
                     </a>
                   ) : null}
                   {project.github ? (
                     <a className="text-link" href={project.github} target="_blank" rel="noreferrer">
-                      {githubHandle(project.github)}
+                      {t.ui.repo}
                     </a>
                   ) : null}
                 </p>

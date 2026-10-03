@@ -39,6 +39,7 @@ export const profile = {
   email: "sebalardelli@gmail.com",
   phone: "+54 3464 440119",
   github: "https://github.com/SebaLardelli",
+  linkedin: "https://www.linkedin.com/in/sebasti%C3%A1n-lardelli/",
   cv: "#cv",
   image: publicUrl("/sebastian-lardelli.png"),
   musicmania: "https://sebalardelli.github.io/MusicMania/",
@@ -83,16 +84,16 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    title: "APIs REST con Node.js y TypeScript",
+    title: "APIs REST con stack MERN y TypeScript",
     company: "UAI · Ingeniería en Sistemas Informáticos",
     period: "Ago 2026 — Actualidad",
     current: true,
     description:
-      "Materia Desarrollo y Middleware Web, dentro de la carrera. Estoy pasando a Node el mismo tipo de backend que ya tenía en PHP: recursos con validación, hash de contraseñas y una capa HTTP que no se mezcla con la persistencia.",
+      "Materia Desarrollo y Middleware Web, dentro de la carrera. Estoy aprendiendo el stack MERN con TypeScript: MongoDB, Express, React y Node.js. API REST con validación, autenticación y capas (routes, controllers, models).",
     highlights: [
       "API REST en Express 5 y TypeScript sobre MongoDB / Mongoose, con paginado y filtros.",
-      "Zod en middleware: si el body no cierra, el controller no corre. Registro y login con bcryptjs (el hash no se selecciona en lecturas; mismo 401 si el mail no existe o la password es mala).",
-      "CORS limitado al front local. Git, capas (routes, controllers, models) y un front React de portfolio que consume el health de esa API.",
+      "Validación con Zod en middleware y registro/login con bcryptjs.",
+      "Git, CORS al front local y un front React que consume esa API.",
     ],
   },
 ];
@@ -116,7 +117,7 @@ export const formation: FormationItem[] = [
     period: "Últimos años",
     current: true,
     detail:
-      "Carrera de grado. En Desarrollo y Middleware Web armo APIs REST con Node.js, Express 5, TypeScript, MongoDB, Zod y autenticación: el mismo criterio de capas que ya usaba en PHP.",
+      "Carrera de grado. En Desarrollo y Middleware Web estoy aprendiendo el stack MERN con TypeScript: APIs REST en Express 5, MongoDB, Zod y autenticación.",
   },
   {
     title: "Tecnicatura Superior en Desarrollo de Software",
@@ -348,6 +349,6 @@ export const projects: ProjectItem[] = [
 export const about = [
   "Soy de Villa Mugueta, Santa Fe, y vivo en Rosario: vine a estudiar y estoy acá ahora. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en Eklab Institute, nivel A2+. Mi búsqueda principal es un rol junior para dedicarme a integraciones con IA, con base de backend o full stack: APIs REST, autenticación, datos y un producto que se pueda explicar de punta a punta.",
   "CalcoMania es mi emprendimiento: un negocio personal formal, montado desde cero, con documentación de análisis y el sistema en producción (Slim, MySQL, JWT, cookies, catálogo, carrito, checkout y panel). AI_Agro es el proyecto del curso de Inteligencia Artificial de la UTN: el productor habla por Telegram y el bot responde con diagnóstico, pronóstico, RAG y audio. En IZO también dejé una app de escritorio en VB.NET (ventas, SQL Server y ticket con ReportViewer) y laboratorios de ruteo estático y dinámico en Kathará. MusicMania está publicado y se juega.",
-  "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas, mockups y prototipos, y recién ahí implemento. En la UAI, en Desarrollo y Middleware Web, hago el mismo tipo de API con Express, TypeScript y Mongo: Zod en la puerta, bcrypt para las contraseñas, recursos con Mongoose. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
+  "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas, mockups y prototipos, y recién ahí implemento. En la UAI, en Desarrollo y Middleware Web, estoy aprendiendo el stack MERN con TypeScript: Express, MongoDB, Zod y bcrypt. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
   "Como plus, ahora estoy aprendiendo robótica: Arduino en Tinkercad, prácticas reales en la facultad y un proyecto a futuro. También practico conducción de drone en simulador, en Uncrashed FPV.",
 ];

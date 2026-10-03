@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/LanguageContext";
-import { FileIcon, GithubIcon, MailIcon } from "./icons";
+import { FileIcon, GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 import { AvailabilityBadge, CredentialLink, SocialPill } from "./Pills";
 
 export function Hero() {
@@ -61,6 +61,9 @@ export function Hero() {
         </SocialPill>
         <SocialPill href={profile.github}>
           <GithubIcon /> GitHub
+        </SocialPill>
+        <SocialPill href={profile.linkedin}>
+          <LinkedinIcon /> {profile.name}
         </SocialPill>
         <SocialPill href={profile.cv}>
           <FileIcon /> CV

@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/LanguageContext";
-import { FileIcon, MailIcon, PhoneIcon } from "./icons";
+import { FileIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./icons";
 import { Section } from "./Section";
 
 export function Contact() {
@@ -25,6 +25,12 @@ export function Contact() {
       href: profile.cv,
       icon: <FileIcon className="size-6" />,
     },
+    {
+      label: t.ui.contactLinkedin,
+      value: profile.name,
+      href: profile.linkedin,
+      icon: <LinkedinIcon className="size-6" />,
+    },
   ];
 
   return (
@@ -32,7 +38,7 @@ export function Contact() {
       <p className="mb-6 text-pretty text-gray-600 dark:text-gray-300">
         {t.ui.contactIntro}
       </p>
-      <ul className="grid gap-3 xl:grid-cols-3">
+      <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {contacts.map((item) => (
           <li key={item.label}>
             <a

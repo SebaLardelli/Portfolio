@@ -31,6 +31,7 @@ export type UiCopy = {
   contactEmail: string;
   contactPhone: string;
   contactCv: string;
+  contactLinkedin: string;
   downloadCv: string;
   cv: {
     pageTitle: string;

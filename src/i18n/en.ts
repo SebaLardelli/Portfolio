@@ -63,15 +63,15 @@ export const en: Copy = {
     },
     {
       ...experienceEs[2],
-      title: "REST APIs with Node.js and TypeScript",
+      title: "REST APIs with the MERN stack and TypeScript",
       company: "UAI · Computer Systems Engineering",
       period: "Aug 2026 — Present",
       description:
-        "Web Development and Middleware, a course in the degree. I am moving to Node the same kind of backend I already had in PHP: validated resources, password hashing, and an HTTP layer that stays separate from persistence.",
+        "Web Development and Middleware, a course in the degree. I am currently learning the MERN stack with TypeScript: MongoDB, Express, React, and Node.js. REST API with validation, authentication, and layers (routes, controllers, models).",
       highlights: [
         "REST API in Express 5 and TypeScript on MongoDB / Mongoose, with pagination and filters.",
-        "Zod in middleware: if the body is invalid, the controller does not run. Sign-up and login with bcryptjs (the hash is never selected on reads; same 401 if the email does not exist or the password is wrong).",
-        "CORS limited to the local front. Git, layers (routes, controllers, models), and a React portfolio front that consumes that API health endpoint.",
+        "Validation with Zod in middleware, and sign-up/login with bcryptjs.",
+        "Git, CORS for the local front, and a React front that consumes that API.",
       ],
     },
   ],
@@ -82,7 +82,7 @@ export const en: Copy = {
       place: "Universidad Abierta Interamericana",
       period: "Final years",
       detail:
-        "Undergraduate degree. In Web Development and Middleware I build REST APIs with Node.js, Express 5, TypeScript, MongoDB, Zod, and authentication: the same layering I already used in PHP.",
+        "Undergraduate degree. In Web Development and Middleware I am learning the MERN stack with TypeScript: REST APIs in Express 5, MongoDB, Zod, and authentication.",
     },
     {
       ...formationEs[1],
@@ -205,7 +205,7 @@ export const en: Copy = {
   about: [
     "I am from Villa Mugueta, Santa Fe, and I live in Rosario: I moved here to study and I am here now. Higher Technician in Software Development (Instituto Zona Oeste, 2023–2025) and now in the final years of Computer Systems Engineering at UAI. I am taking English at Eklab Institute, A2+ level. My main search is a junior role focused on AI integrations, with a backend or full-stack base: REST APIs, authentication, data, and a product I can explain end to end.",
     "CalcoMania is my venture: a formal personal business, built from scratch, with analysis documentation and the system in production (Slim, MySQL, JWT, cookies, catalog, cart, checkout, and admin). AI_Agro is the project from the UTN Artificial Intelligence course: the grower talks on Telegram and the bot answers with diagnosis, forecast, RAG, and audio. At IZO I also shipped a VB.NET desktop app (sales, SQL Server, and a ReportViewer ticket) and static and dynamic routing labs in Kathará. MusicMania is published and playable.",
-    "I do not start with the code. I do elicitation, requirements specification, diagrams, mockups, and prototypes, and only then I implement. At UAI, in Web Development and Middleware, I build the same kind of API with Express, TypeScript, and Mongo: Zod at the door, bcrypt for passwords, resources with Mongoose. CalcoMania's JWT is already there; the one for this course is built in Auth II. I want a team where that can be defended in an interview, not only listed on a CV.",
+    "I do not start with the code. I do elicitation, requirements specification, diagrams, mockups, and prototypes, and only then I implement. At UAI, in Web Development and Middleware, I am learning the MERN stack with TypeScript: Express, MongoDB, Zod, and bcrypt. CalcoMania's JWT is already there; the one for this course is built in Auth II. I want a team where that can be defended in an interview, not only listed on a CV.",
     "As a plus, I am currently learning robotics: Arduino in Tinkercad, hands-on labs at university, and a project ahead. I also practice drone flying in a simulator, Uncrashed FPV.",
   ],
   ui: {
@@ -231,6 +231,7 @@ export const en: Copy = {
     contactEmail: "Email",
     contactPhone: "Phone",
     contactCv: "Résumé",
+    contactLinkedin: "LinkedIn",
     downloadCv: "View résumé",
     cv: {
       pageTitle: "Sebastián Lardelli | Résumé",

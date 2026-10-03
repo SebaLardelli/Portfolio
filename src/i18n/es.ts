@@ -38,6 +38,7 @@ export const es: Copy = {
     contactEmail: "Email",
     contactPhone: "Teléfono",
     contactCv: "Currículum",
+    contactLinkedin: "LinkedIn",
     downloadCv: "Ver currículum",
     cv: {
       pageTitle: "Sebastián Lardelli | Currículum",
