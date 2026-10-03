@@ -217,7 +217,7 @@ export const en: Copy = {
     contactMe: "Contact me",
     openDemo: "Open demo",
     openSite: "Open site",
-    repo: "Repo",
+    repo: "Repository",
     inProgress: "In progress",
     openMenu: "Open menu",
     closeMenu: "Close menu",

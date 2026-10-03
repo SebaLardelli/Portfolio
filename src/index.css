@@ -200,6 +200,16 @@ body {
   box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
 }
 
+@media (min-width: 1280px) {
+  .project-frame:not(.project-frame-tall) {
+    width: 100%;
+  }
+
+  .project-frame:not(.project-frame-tall) .project-shot {
+    width: 100%;
+  }
+}
+
 .project-frame-tall .project-shot {
   max-height: min(52rem, 80vh);
   width: auto;

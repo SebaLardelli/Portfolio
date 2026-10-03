@@ -24,7 +24,7 @@ export const es: Copy = {
     contactMe: "Contáctame",
     openDemo: "Abrir demo",
     openSite: "Abrir página",
-    repo: "Repo",
+    repo: "Repositorio",
     inProgress: "En curso",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
