@@ -35,8 +35,10 @@ export function Hero() {
                 href={item.href}
                 label={item.label}
                 logo={item.logo}
+                logoLight={item.logoLight}
                 logoAlt={item.logoAlt}
                 round={item.round}
+                wide={item.wide}
               />
             </li>
           ))}
@@ -64,6 +66,10 @@ export function Hero() {
           <FileIcon /> CV
         </SocialPill>
       </nav>
+
+      {profile.plus ? (
+        <p className="mt-6 max-w-3xl text-pretty text-sm text-gray-500 dark:text-gray-400">{profile.plus}</p>
+      ) : null}
     </section>
   );
 }

@@ -19,17 +19,27 @@ export const profile = {
       logoAlt: "Universidad Abierta Interamericana",
       round: true,
     },
+    {
+      label: "Inglés A2+ · Eklab Institute",
+      href: "https://eklabinstitute.com/",
+      logo: publicUrl("/logos/eklab.png"),
+      logoLight: publicUrl("/logos/eklab-light.png"),
+      logoAlt: "Eklab Institute",
+      wide: true,
+    },
   ],
   headline:
-    "Diseño APIs REST y productos web que quedan en producción: autenticación, persistencia y un front que se puede abrir. Backend en PHP y Node.js; también Python e IA cuando el problema lo pide.",
+    "Mi búsqueda principal es dedicarme a integraciones con IA: conectar modelos con APIs, datos y un producto que se pueda usar. Backend en PHP y Node.js; Python cuando el problema lo pide.",
   summary:
-    "CalcoMania es un e-commerce real (PHP, Slim, MySQL, JWT) con dominio propio: catálogo, carrito, checkout y un admin. AI_Agro salió del curso de Inteligencia Artificial de la UTN: visión, RAG, Docker y un bot de Telegram que responde por texto y audio. Técnico Superior en Desarrollo de Software; en la UAI estoy en los últimos años de Ingeniería en Sistemas Informáticos, con Express, TypeScript y MongoDB. Busco un rol junior de backend o full stack.",
+    "CalcoMania es un e-commerce real (PHP, Slim, MySQL, JWT) con dominio propio: catálogo, carrito, checkout y un admin. AI_Agro salió del curso de Inteligencia Artificial de la UTN: visión, RAG, Docker y un bot de Telegram que responde por texto y audio. Busco un rol junior de backend o full stack, con foco en integraciones con IA.",
+  plus:
+    "Plus: ahora estoy aprendiendo robótica con Arduino en Tinkercad y prácticas reales en la facultad, con un proyecto a futuro. También practico conducción de drone en simulador (Uncrashed FPV).",
   available: true,
-  location: "Rosario, Santa Fe, Argentina",
+  location: "De Villa Mugueta. Vivo en Rosario, Santa Fe, Argentina.",
   email: "sebalardelli@gmail.com",
   phone: "+54 3464 440119",
   github: "https://github.com/SebaLardelli",
-  cv: publicUrl("/cv.pdf"),
+  cv: "#cv",
   image: publicUrl("/sebastian-lardelli.png"),
   musicmania: "https://sebalardelli.github.io/MusicMania/",
   calcomania: "https://www.calcoomaniaa.com",
@@ -47,16 +57,16 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     title: "CalcoMania — e-commerce en producción",
-    company: "Producto propio · Backend PHP",
+    company: "Emprendimiento propio · Backend PHP",
     period: "2025 — Actualidad",
     current: true,
     description:
-      "Tienda B2C publicada en calcoomaniaa.com. API REST con PHP Slim, MySQL, JWT y Apache. Nació como proyecto final de la tecnicatura y quedó en producción: el visitante compra; el admin opera el catálogo.",
+      "Negocio personal en calcoomaniaa.com, montado desde cero como emprendimiento formal: no es una práctica de clase. API REST con PHP Slim, MySQL, JWT y Apache. El visitante compra; el admin opera el catálogo.",
     highlights: [
+      "Levantado de 0 con documentación de análisis y diseño: elicitación, requerimientos, diagramas y prototipo antes de pasar a producción.",
       "Autenticación con JWT, roles de usuario y administrador, validación de correo, hash de contraseñas y recuperación por OTP (6 dígitos, 15 minutos, un solo uso).",
       "Sesión y carrito con cookies HTTP, no localStorage. Checkout con punto de retiro y hasta dos medios de pago (efectivo y transferencia) cuyos montos tienen que cerrar el total.",
       "CRUD de productos, categorías, temáticas, stock (pasa a Agotado en cero), puntos de retiro y métodos de pago. Imágenes en el servidor y mails transaccionales.",
-      "Front y back del mismo producto: catálogo con filtros, calcos personalizadas, mis compras e inicio de sesión, todo online.",
     ],
   },
   {
@@ -93,6 +103,10 @@ export type FormationItem = {
   period: string;
   detail?: string;
   current?: boolean;
+  href?: string;
+  logo?: string;
+  logoLight?: string;
+  logoAlt?: string;
 };
 
 export const formation: FormationItem[] = [
@@ -120,11 +134,15 @@ export const formation: FormationItem[] = [
   },
   {
     title: "Inglés",
-    place: "Instituto de inglés",
-    period: "Nivel intermedio",
+    place: "Eklab Institute",
+    period: "Nivel A2+ · En curso",
     current: true,
+    href: "https://eklabinstitute.com/",
+    logo: publicUrl("/logos/eklab.png"),
+    logoLight: publicUrl("/logos/eklab-light.png"),
+    logoAlt: "Eklab Institute",
     detail:
-      "Cursando en un instituto. Nivel intermedio: no es una certificación tipo First o TOEFL, es formación en marcha.",
+      "Cursando en Rosario. Nivel actual A2+ según el libro (MCER): tramo alto de A2, todavía no B1. No es First ni TOEFL.",
   },
 ];
 
@@ -203,6 +221,7 @@ export type ProjectItem = {
   imageAlt?: string;
   github?: string;
   demo?: string;
+  liveKind?: "site" | "demo";
   stackImageBelow?: boolean;
 };
 
@@ -234,20 +253,21 @@ export const projects: ProjectItem[] = [
   {
     title: "CalcoMania",
     description:
-      "E-commerce en producción, con dominio propio (calcoomaniaa.com). API REST en PHP Slim, MySQL y JWT: catálogo, carrito, checkout, autenticación y panel de administración. La sesión y el carrito van por cookies.",
+      "Emprendimiento personal formal: un e-commerce real, con dominio propio (calcoomaniaa.com), montado completamente desde cero. No es una demo ni un TP colgado: es el negocio en producción. API REST en PHP Slim, MySQL y JWT; catálogo, carrito, checkout, autenticación y panel. La sesión y el carrito van por cookies.",
     highlights: [
-      "Compra de punta a punta: filtros por categoría y temática, calcos personalizadas, carrito, mis compras, punto de retiro y hasta dos medios de pago por compra (efectivo y transferencia).",
+      "Negocio propio documentado de punta a punta: elicitación, especificación de requerimientos, diagramas, mockups y prototipo antes de implementar el sistema que hoy opera la tienda.",
+      "Compra real: filtros por categoría y temática, calcos personalizadas, carrito, mis compras, punto de retiro y hasta dos medios de pago por compra (efectivo y transferencia).",
       "Backoffice con roles: el admin hace CRUD de productos, categorías, temáticas, puntos de retiro y métodos de pago. El stock se descuenta al vender y pasa a Agotado en cero.",
       "Seguridad: registro con validación de correo, login, cierre de sesión, hash de contraseñas y OTP de un solo uso (6 dígitos, 15 min). Imágenes en /uploads y mails transaccionales.",
-      "No es una maqueta: está publicada, se entra con usuario real y se opera como tienda.",
     ],
     tags: [tag.php, tag.slim, tag.mysql, tag.jwt, tag.rest],
     image: publicUrl("/projects/calcomania.png"),
     imagePosition: "center",
     imageWidth: 1024,
-    imageHeight: 493,
-    imageAlt: "CalcoMania: e-commerce en producción, catálogo de calcos con carrito y stock",
+    imageHeight: 526,
+    imageAlt: "CalcoMania: tienda en producción, catálogo de calcos con carrito y stock",
     demo: "https://www.calcoomaniaa.com",
+    liveKind: "site",
   },
   {
     title: "AI_Agro",
@@ -271,14 +291,19 @@ export const projects: ProjectItem[] = [
   {
     title: "Sistema de ventas — escritorio VB.NET",
     description:
-      "Proyecto final de la tecnicatura (Instituto Zona Oeste, 2024). Aplicación de escritorio WinForms para un local de indumentaria: clientes, prendas, marcas, ventas y formas de pago, con SQL Server.",
+      "Proyecto final de la tecnicatura (Instituto Zona Oeste, 2024). Sistema completo para un local de indumentaria: no es solo VB. Front en WinForms, lógica de negocio y SQL Server. Login, ABM, ventas, informes y factura.",
     highlights: [
+      "Tres capas en el mismo sistema: pantallas WinForms, módulos de clases y persistencia en SQL Server.",
       "ABM de clientes, prendas, marcas y medios de pago; alta de venta y consultas por fecha.",
       "Login y registro. Lista de precios e impresión/exportación de factura (ticket) con ReportViewer (RDLC).",
-      "Capas en el propio WinForms: conexión a SQL Server, módulos de clases y pantallas de clientes, prendas, ventas y factura.",
       "El mismo ciclo de análisis de la tecnicatura: requerimientos, diagramas y prototipo de escritorio antes de dejar el sistema andando.",
     ],
     tags: [tag.vb, tag.winforms, tag.sqlserver],
+    image: publicUrl("/projects/vb-ventas.png"),
+    imagePosition: "center",
+    imageWidth: 1289,
+    imageHeight: 749,
+    imageAlt: "Sistema de ventas VB.NET: menú principal con clientes, prendas, marcas, pagos y ventas",
     github: "https://github.com/SebaLardelli/VB-Trabajo-Final",
   },
   {
@@ -321,7 +346,8 @@ export const projects: ProjectItem[] = [
 ];
 
 export const about = [
-  "Soy desarrollador de software en Rosario, Argentina. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en un instituto, nivel intermedio. Busco un rol junior de backend o full stack: APIs REST, autenticación, bases de datos y un producto que se pueda explicar de punta a punta — rutas, validación, persistencia y una interfaz que no sea un PowerPoint.",
-  "CalcoMania es el sistema más completo que tengo en el aire: Slim, MySQL, JWT, cookies, catálogo, carrito, checkout y panel. AI_Agro es el proyecto del curso de Inteligencia Artificial de la UTN: el productor habla por Telegram y el bot responde con diagnóstico, pronóstico, RAG y audio. En IZO también dejé una app de escritorio en VB.NET (ventas, SQL Server y ticket con ReportViewer) y laboratorios de ruteo estático y dinámico en Kathará. MusicMania está publicado y se juega.",
+  "Soy de Villa Mugueta, Santa Fe, y vivo en Rosario: vine a estudiar y estoy acá ahora. Técnico Superior en Desarrollo de Software (Instituto Zona Oeste, 2023–2025) y, ahora, en los últimos años de Ingeniería en Sistemas Informáticos en la UAI. Cursando inglés en Eklab Institute, nivel A2+. Mi búsqueda principal es un rol junior para dedicarme a integraciones con IA, con base de backend o full stack: APIs REST, autenticación, datos y un producto que se pueda explicar de punta a punta.",
+  "CalcoMania es mi emprendimiento: un negocio personal formal, montado desde cero, con documentación de análisis y el sistema en producción (Slim, MySQL, JWT, cookies, catálogo, carrito, checkout y panel). AI_Agro es el proyecto del curso de Inteligencia Artificial de la UTN: el productor habla por Telegram y el bot responde con diagnóstico, pronóstico, RAG y audio. En IZO también dejé una app de escritorio en VB.NET (ventas, SQL Server y ticket con ReportViewer) y laboratorios de ruteo estático y dinámico en Kathará. MusicMania está publicado y se juega.",
   "No arranco por el código. Hago elicitación, especificación de requerimientos, diagramas, mockups y prototipos, y recién ahí implemento. En la UAI, en Desarrollo y Middleware Web, hago el mismo tipo de API con Express, TypeScript y Mongo: Zod en la puerta, bcrypt para las contraseñas, recursos con Mongoose. El JWT de CalcoMania ya está; el de esta materia se arma en Auth II. Me interesa un equipo donde eso se pueda defender en una entrevista, no solo listar en un CV.",
+  "Como plus, ahora estoy aprendiendo robótica: Arduino en Tinkercad, prácticas reales en la facultad y un proyecto a futuro. También practico conducción de drone en simulador, en Uncrashed FPV.",
 ];

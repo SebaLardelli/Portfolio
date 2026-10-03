@@ -2,6 +2,7 @@ import type { ProjectItem } from "../data/profile";
 import { useI18n } from "../i18n/LanguageContext";
 import { CheckIcon, CodeIcon, ExternalLinkIcon, GithubIcon } from "./icons";
 import { Section } from "./Section";
+import { TechIcon } from "./TechIcon";
 
 function ProjectShot({ project, priority }: { project: ProjectItem; priority?: boolean }) {
   if (!project.image) return null;
@@ -49,8 +50,9 @@ export function Projects() {
                 {project.tags.map((tag) => (
                   <li
                     key={tag.name}
-                    className={`rounded-full px-2.5 py-1 text-xs ${tag.className}`}
+                    className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs ${tag.className}`}
                   >
+                    <TechIcon name={tag.name} branded={false} />
                     {tag.name}
                   </li>
                 ))}
@@ -82,7 +84,7 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <ExternalLinkIcon /> {t.ui.openDemo}
+                    <ExternalLinkIcon /> {project.liveKind === "site" ? t.ui.openSite : t.ui.openDemo}
                   </a>
                 ) : null}
                 {project.github ? (

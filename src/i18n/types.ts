@@ -17,6 +17,7 @@ export type UiCopy = {
   playMusicmania: string;
   contactMe: string;
   openDemo: string;
+  openSite: string;
   repo: string;
   inProgress: string;
   openMenu: string;
@@ -31,6 +32,20 @@ export type UiCopy = {
   contactPhone: string;
   contactCv: string;
   downloadCv: string;
+  cv: {
+    pageTitle: string;
+    back: string;
+    print: string;
+    profile: string;
+    education: string;
+    experience: string;
+    projects: string;
+    skills: string;
+    languages: string;
+    additional: string;
+    spanish: string;
+    english: string;
+  };
   nav: {
     projects: string;
     experience: string;

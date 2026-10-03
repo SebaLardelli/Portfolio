@@ -1,6 +1,7 @@
 import { useI18n } from "../i18n/LanguageContext";
 import { CodeIcon } from "./icons";
 import { Section } from "./Section";
+import { TechIcon } from "./TechIcon";
 
 export function Skills() {
   const { t } = useI18n();
@@ -18,8 +19,9 @@ export function Skills() {
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full border border-black/10 px-2.5 py-1 text-sm text-gray-600 dark:border-white/10 dark:text-gray-300"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-white/50 px-2.5 py-1 text-sm text-gray-700 dark:border-white/10 dark:bg-white/5 dark:text-gray-300"
                   >
+                    <TechIcon name={item} />
                     {item}
                   </li>
                 ))}

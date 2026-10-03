@@ -20,25 +20,32 @@ export const en: Copy = {
         ...profileEs.credentials[1],
         label: "Computer Systems Engineering student",
       },
+      {
+        ...profileEs.credentials[2],
+        label: "English A2+ · Eklab Institute",
+      },
     ],
     headline:
-      "I design REST APIs and web products that stay in production: authentication, persistence, and a front you can actually open. Backend in PHP and Node.js; also Python and AI when the problem needs it.",
+      "My main search is to work on AI integrations: connecting models to APIs, data, and a product people can actually use. Backend in PHP and Node.js; Python when the problem needs it.",
     summary:
-      "CalcoMania is a real e-commerce (PHP, Slim, MySQL, JWT) on its own domain: catalog, cart, checkout, and an admin. AI_Agro came out of the UTN Artificial Intelligence course: vision, RAG, Docker, and a Telegram bot that answers in text and audio. Higher Technician in Software Development; at UAI I am in the final years of Computer Systems Engineering, working with Express, TypeScript, and MongoDB. I am looking for a junior backend or full-stack role.",
+      "CalcoMania is a formal personal venture (PHP, Slim, MySQL, JWT) on its own domain, built from scratch: catalog, cart, checkout, and an admin. AI_Agro came out of the UTN Artificial Intelligence course: vision, RAG, Docker, and a Telegram bot that answers in text and audio. I am looking for a junior backend or full-stack role, focused on AI integrations.",
+    plus:
+      "Plus: I am currently learning robotics with Arduino in Tinkercad and hands-on labs at university, with a project ahead. I also practice drone flying in a simulator (Uncrashed FPV).",
+    location: "From Villa Mugueta. I live in Rosario, Santa Fe, Argentina.",
   },
   experience: [
     {
       ...experienceEs[0],
       title: "CalcoMania — e-commerce in production",
-      company: "Own product · PHP backend",
+      company: "Own venture · PHP backend",
       period: "2025 — Present",
       description:
-        "B2C store live at calcoomaniaa.com. REST API with PHP Slim, MySQL, JWT, and Apache. It started as the technician-program final project and stayed in production: visitors buy; the admin runs the catalog.",
+        "Personal business live at calcoomaniaa.com, built from scratch as a formal venture — not a class exercise. REST API with PHP Slim, MySQL, JWT, and Apache. Visitors buy; the admin runs the catalog.",
       highlights: [
+        "Built from zero with analysis and design documentation: elicitation, requirements, diagrams, and a prototype before going to production.",
         "Authentication with JWT, user and admin roles, email validation, password hashing, and OTP recovery (6 digits, 15 minutes, single use).",
         "Session and cart in HTTP cookies, not localStorage. Checkout with a pickup point and up to two payment methods (cash and bank transfer) whose amounts must match the total.",
         "CRUD for products, categories, themes, stock (sold out at zero), pickup points, and payment methods. Images on the server and transactional emails.",
-        "Front and back of the same product: filtered catalog, custom stickers, order history, and login — all online.",
       ],
     },
     {
@@ -94,10 +101,10 @@ export const en: Copy = {
     {
       ...formationEs[3],
       title: "English",
-      place: "English institute",
-      period: "Intermediate level",
+      place: "Eklab Institute",
+      period: "A2+ · In progress",
       detail:
-        "Currently taking classes at an institute. Intermediate level: not a First or TOEFL certificate — training in progress.",
+        "Currently taking classes in Rosario. Current level A2+ according to the coursebook (CEFR): top of A2, not yet B1. Not First or TOEFL.",
     },
   ],
   skillGroups: [
@@ -136,14 +143,14 @@ export const en: Copy = {
     {
       ...projectsEs[0],
       description:
-        "E-commerce in production, on its own domain (calcoomaniaa.com). REST API in PHP Slim, MySQL, and JWT: catalog, cart, checkout, authentication, and an admin panel. Session and cart go through cookies.",
+        "A formal personal venture: a real e-commerce on its own domain (calcoomaniaa.com), built entirely from scratch. Not a demo and not a homework upload — the business is in production. REST API in PHP Slim, MySQL, and JWT; catalog, cart, checkout, authentication, and an admin panel. Session and cart go through cookies.",
       highlights: [
-        "End-to-end purchase: filters by category and theme, custom stickers, cart, order history, pickup point, and up to two payment methods per order (cash and bank transfer).",
+        "Own business documented end to end: elicitation, requirements specification, diagrams, mockups, and a prototype before implementing the system that runs the store today.",
+        "Real purchase flow: filters by category and theme, custom stickers, cart, order history, pickup point, and up to two payment methods per order (cash and bank transfer).",
         "Backoffice with roles: the admin CRUDs products, categories, themes, pickup points, and payment methods. Stock decreases on sale and becomes Sold out at zero.",
         "Security: sign-up with email validation, login, logout, password hashing, and one-time OTP (6 digits, 15 min). Images in /uploads and transactional emails.",
-        "Not a mock: it is published, you log in with a real user, and you operate it as a store.",
       ],
-      imageAlt: "CalcoMania: e-commerce in production, sticker catalog with cart and stock",
+      imageAlt: "CalcoMania: store in production, sticker catalog with cart and stock",
     },
     {
       ...projectsEs[1],
@@ -161,13 +168,14 @@ export const en: Copy = {
       ...projectsEs[2],
       title: "Sales system — VB.NET desktop",
       description:
-        "Technician-program final project (Instituto Zona Oeste, 2024). WinForms desktop app for a clothing store: customers, garments, brands, sales, and payment methods, with SQL Server.",
+        "Technician-program final project (Instituto Zona Oeste, 2024). A complete clothing-store system: not just VB. WinForms front, business logic, and SQL Server. Login, CRUD, sales, reports, and invoices.",
       highlights: [
+        "Three layers in the same system: WinForms screens, class modules, and SQL Server persistence.",
         "CRUD for customers, garments, brands, and payment methods; new sale and queries by date.",
         "Login and sign-up. Price list and invoice/ticket print or export with ReportViewer (RDLC).",
-        "Layers inside WinForms: SQL Server connection, class modules, and screens for customers, garments, sales, and invoice.",
         "The same analysis cycle from the program: requirements, diagrams, and a desktop prototype before shipping the system.",
       ],
+      imageAlt: "VB.NET sales system: main menu with customers, garments, brands, payments, and sales",
     },
     {
       ...projectsEs[3],
@@ -195,9 +203,10 @@ export const en: Copy = {
     },
   ],
   about: [
-    "I am a software developer in Rosario, Argentina. Higher Technician in Software Development (Instituto Zona Oeste, 2023–2025) and now in the final years of Computer Systems Engineering at UAI. I am taking English at an institute, intermediate level. I am looking for a junior backend or full-stack role: REST APIs, authentication, databases, and a product I can explain end to end — routes, validation, persistence, and an interface that is not a PowerPoint.",
-    "CalcoMania is the most complete system I have live: Slim, MySQL, JWT, cookies, catalog, cart, checkout, and admin. AI_Agro is the project from the UTN Artificial Intelligence course: the grower talks on Telegram and the bot answers with diagnosis, forecast, RAG, and audio. At IZO I also shipped a VB.NET desktop app (sales, SQL Server, and a ReportViewer ticket) and static and dynamic routing labs in Kathará. MusicMania is published and playable.",
+    "I am from Villa Mugueta, Santa Fe, and I live in Rosario: I moved here to study and I am here now. Higher Technician in Software Development (Instituto Zona Oeste, 2023–2025) and now in the final years of Computer Systems Engineering at UAI. I am taking English at Eklab Institute, A2+ level. My main search is a junior role focused on AI integrations, with a backend or full-stack base: REST APIs, authentication, data, and a product I can explain end to end.",
+    "CalcoMania is my venture: a formal personal business, built from scratch, with analysis documentation and the system in production (Slim, MySQL, JWT, cookies, catalog, cart, checkout, and admin). AI_Agro is the project from the UTN Artificial Intelligence course: the grower talks on Telegram and the bot answers with diagnosis, forecast, RAG, and audio. At IZO I also shipped a VB.NET desktop app (sales, SQL Server, and a ReportViewer ticket) and static and dynamic routing labs in Kathará. MusicMania is published and playable.",
     "I do not start with the code. I do elicitation, requirements specification, diagrams, mockups, and prototypes, and only then I implement. At UAI, in Web Development and Middleware, I build the same kind of API with Express, TypeScript, and Mongo: Zod at the door, bcrypt for passwords, resources with Mongoose. CalcoMania's JWT is already there; the one for this course is built in Auth II. I want a team where that can be defended in an interview, not only listed on a CV.",
+    "As a plus, I am currently learning robotics: Arduino in Tinkercad, hands-on labs at university, and a project ahead. I also practice drone flying in a simulator, Uncrashed FPV.",
   ],
   ui: {
     greeting: "Hey, I'm",
@@ -207,6 +216,7 @@ export const en: Copy = {
     playMusicmania: "Play MusicMania",
     contactMe: "Contact me",
     openDemo: "Open demo",
+    openSite: "Open site",
     repo: "Repo",
     inProgress: "In progress",
     openMenu: "Open menu",
@@ -214,14 +224,28 @@ export const en: Copy = {
     switchLang: "Cambiar a español",
     themeLight: "Switch to light theme",
     themeDark: "Switch to dark theme",
-    pageTitle: "Sebastián Lardelli | Backend Developer — Systems Engineering, PHP, Node.js",
+    pageTitle: "Sebastián Lardelli | AI integrations — Backend, PHP, Node.js",
     pageDescription:
-      "Software developer in Rosario. Final years of Computer Systems Engineering (UAI). REST APIs in PHP Slim and Node.js, Express, and TypeScript. E-commerce in production, JWT authentication, Docker, RAG, and AI. Portfolio of Sebastián Lardelli.",
-    contactIntro: "Rosario, Santa Fe. Email me, call me, or download the CV — all three are here.",
+      "Software developer from Villa Mugueta, living in Rosario. Final years of Computer Systems Engineering (UAI). Looking for AI integration work. REST APIs in PHP Slim and Node.js, RAG, Docker, and e-commerce in production. Portfolio of Sebastián Lardelli.",
+    contactIntro: "I live in Rosario (I am from Villa Mugueta, Santa Fe). Email me, call me, or open the résumé — all three are here.",
     contactEmail: "Email",
     contactPhone: "Phone",
     contactCv: "Résumé",
-    downloadCv: "Download CV (PDF)",
+    downloadCv: "View résumé",
+    cv: {
+      pageTitle: "Sebastián Lardelli | Résumé",
+      back: "Back to portfolio",
+      print: "Print / PDF",
+      profile: "Profile",
+      education: "Education",
+      experience: "Experience",
+      projects: "Projects",
+      skills: "Skills",
+      languages: "Languages",
+      additional: "Additional",
+      spanish: "Spanish — native",
+      english: "English — A2+ (Eklab Institute, in progress)",
+    },
     nav: {
       projects: "Projects",
       experience: "Experience",

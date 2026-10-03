@@ -150,3 +150,13 @@ export function CloseIcon(props: IconProps) {
     </Icon>
   );
 }
+
+export function PrinterIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M6 9V4h12v5" />
+      <rect x="4" y="9" width="16" height="8" rx="1.5" />
+      <path d="M7 17h10v4H7z" />
+    </Icon>
+  );
+}

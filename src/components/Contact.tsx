@@ -24,7 +24,6 @@ export function Contact() {
       value: t.ui.downloadCv,
       href: profile.cv,
       icon: <FileIcon className="size-6" />,
-      download: "Sebastian-Lardelli-CV.pdf",
     },
   ];
 
@@ -38,7 +37,6 @@ export function Contact() {
           <li key={item.label}>
             <a
               href={item.href}
-              {...("download" in item && item.download ? { download: item.download } : {})}
               {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
                 ? { target: "_blank", rel: "noreferrer" }
                 : {})}

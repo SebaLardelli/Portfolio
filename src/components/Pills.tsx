@@ -56,15 +56,24 @@ export function CredentialLink({
   href,
   label,
   logo,
+  logoLight,
   logoAlt,
   round,
+  wide,
 }: {
   href: string;
   label: string;
   logo: string;
+  logoLight?: string;
   logoAlt: string;
   round?: boolean;
+  wide?: boolean;
 }) {
+  const box = wide
+    ? "h-8 w-auto max-w-[7.5rem] shrink-0 object-contain"
+    : "size-10 shrink-0 object-contain";
+  const shadow = `drop-shadow-[0_1px_2px_rgba(0,0,0,0.28)] dark:drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)] ${round ? "rounded-full" : ""}`;
+
   return (
     <a
       href={href}
@@ -72,11 +81,14 @@ export function CredentialLink({
       rel="noreferrer"
       className="group inline-flex items-center gap-2.5 text-sm text-gray-600 transition hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400"
     >
-      <img
-        src={logo}
-        alt={logoAlt}
-        className={`size-10 shrink-0 object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.28)] dark:drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)] ${round ? "rounded-full" : ""}`}
-      />
+      {logoLight ? (
+        <>
+          <img src={logoLight} alt={logoAlt} className={`${box} ${shadow} dark:hidden`} />
+          <img src={logo} alt="" className={`${box} ${shadow} hidden dark:block`} />
+        </>
+      ) : (
+        <img src={logo} alt={logoAlt} className={`${box} ${shadow}`} />
+      )}
       <span className="underline-offset-4 group-hover:underline">{label}</span>
     </a>
   );

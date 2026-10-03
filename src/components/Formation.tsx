@@ -18,7 +18,38 @@ export function Formation() {
                 </span>
               ) : null}
             </div>
-            <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400">{item.place}</p>
+            {item.logo && item.href ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-yellow-600 hover:underline dark:text-yellow-400"
+              >
+                {item.logoLight ? (
+                  <>
+                    <img
+                      src={item.logoLight}
+                      alt={item.logoAlt ?? item.place}
+                      className="h-6 w-auto max-w-[7rem] object-contain dark:hidden"
+                    />
+                    <img
+                      src={item.logo}
+                      alt=""
+                      className="hidden h-6 w-auto max-w-[7rem] object-contain dark:block"
+                    />
+                  </>
+                ) : (
+                  <img
+                    src={item.logo}
+                    alt={item.logoAlt ?? item.place}
+                    className="h-6 w-auto max-w-[7rem] object-contain"
+                  />
+                )}
+                {item.place}
+              </a>
+            ) : (
+              <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400">{item.place}</p>
+            )}
             <p className="text-sm text-gray-500">{item.period}</p>
             {item.detail ? (
               <p className="mt-2 text-pretty text-gray-600 dark:text-gray-300">{item.detail}</p>
