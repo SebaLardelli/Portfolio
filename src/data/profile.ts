@@ -201,6 +201,7 @@ export type ProjectItem = {
   imageAlt?: string;
   github?: string;
   demo?: string;
+  stackImageBelow?: boolean;
 };
 
 const tag = {
@@ -261,6 +262,7 @@ export const projects: ProjectItem[] = [
     imageAspect: "3/4",
     imageAlt: "AI_Agro: chatbot de Telegram con pronóstico climático y análisis de foto de maíz",
     github: "https://github.com/SebaLardelli/AI_Agro",
+    stackImageBelow: true,
   },
   {
     title: "Sistema de ventas — escritorio VB.NET",
