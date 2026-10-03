@@ -141,17 +141,25 @@ body {
 
 .project-shot {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  image-rendering: -webkit-optimize-contrast;
+  margin-inline: auto;
 }
 
 .project-frame {
+  width: fit-content;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 1rem;
   border: 1px solid rgb(0 0 0 / 0.1);
   background: #0a0a0a;
   box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
+}
+
+.project-frame-tall .project-shot {
+  max-height: min(52rem, 80vh);
+  width: auto;
 }
 
 .dark .project-frame {

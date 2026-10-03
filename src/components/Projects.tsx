@@ -6,32 +6,24 @@ import { Section } from "./Section";
 function ProjectShot({ project, priority }: { project: ProjectItem; priority?: boolean }) {
   if (!project.image) return null;
 
-  const sourceW = project.imageWidth ?? 1600;
-  const sourceH = project.imageHeight ?? 1000;
+  const sourceW = project.imageWidth ?? 1400;
+  const sourceH = project.imageHeight ?? 900;
   const tall = sourceH / sourceW > 1.15;
-  const displayMax = tall ? Math.min(920, sourceW) : Math.min(1360, sourceW);
 
   const image = (
     <img
       src={project.image}
       alt={project.imageAlt ?? project.title}
-      width={project.imageWidth}
-      height={project.imageHeight}
+      width={sourceW}
+      height={sourceH}
       loading={priority ? "eager" : "lazy"}
       decoding="async"
       className={`project-shot ${project.imageFit === "contain" ? "object-contain" : ""}`}
-      style={{
-        maxWidth: `min(100%, ${displayMax}px)`,
-        maxHeight: tall || project.imageFit === "contain" ? "min(58rem, 86vh)" : undefined,
-      }}
     />
   );
 
   return (
-    <figure
-      className="project-frame mx-auto w-full"
-      style={{ maxWidth: `min(100%, ${displayMax}px)` }}
-    >
+    <figure className={`project-frame mx-auto ${tall ? "project-frame-tall" : ""}`}>
       {project.demo ? (
         <a href={project.demo} target="_blank" rel="noreferrer" className="block">
           {image}
