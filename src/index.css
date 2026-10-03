@@ -17,6 +17,49 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+.text-link {
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .text-link {
+    color: #ca8a04;
+    text-decoration: underline;
+    text-decoration-color: rgb(202 138 4 / 0.7);
+  }
+
+  :is(.dark) .text-link {
+    color: #fbbf24;
+    text-decoration-color: rgb(251 191 36 / 0.55);
+  }
+
+  .project-shot-hint {
+    display: inline-flex;
+  }
+}
+
+.project-shot-hint {
+  display: none;
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  background: rgb(12 11 10 / 0.78);
+  color: #fde68a;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
 .page-width {
   width: 100%;
   max-width: 46.25rem;
@@ -223,7 +266,8 @@ body {
     background: #fff;
   }
 
-  .cv-no-print {
+  .cv-no-print,
+  .project-shot-hint {
     display: none !important;
   }
 

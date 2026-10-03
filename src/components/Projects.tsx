@@ -26,8 +26,11 @@ function ProjectShot({ project, priority }: { project: ProjectItem; priority?: b
   return (
     <figure className={`project-frame mx-auto ${tall ? "project-frame-tall" : ""}`}>
       {project.demo ? (
-        <a href={project.demo} target="_blank" rel="noreferrer" className="block">
+        <a href={project.demo} target="_blank" rel="noreferrer" className="relative block">
           {image}
+          <span className="project-shot-hint">
+            <ExternalLinkIcon className="size-3.5" />
+          </span>
         </a>
       ) : (
         image
@@ -79,7 +82,7 @@ export function Projects() {
               <div className="mt-4 flex flex-wrap gap-3 text-sm">
                 {project.demo ? (
                   <a
-                    className="inline-flex items-center gap-1.5 font-medium text-yellow-600 hover:underline dark:text-yellow-400"
+                    className="text-link inline-flex items-center gap-1.5 font-medium text-yellow-600 dark:text-yellow-400"
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
@@ -89,7 +92,7 @@ export function Projects() {
                 ) : null}
                 {project.github ? (
                   <a
-                    className="inline-flex items-center gap-1.5 text-gray-600 hover:underline dark:text-gray-300"
+                    className="text-link inline-flex items-center gap-1.5 text-gray-600 dark:text-gray-300"
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"

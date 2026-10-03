@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { useI18n } from "../i18n/LanguageContext";
+import { ExternalLinkIcon } from "./icons";
 
 type SocialPillProps = {
   href: string;
@@ -79,7 +80,7 @@ export function CredentialLink({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group inline-flex items-center gap-2.5 text-sm text-gray-600 transition hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400"
+      className="group text-link inline-flex items-center gap-2.5 text-sm text-gray-600 transition hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400"
     >
       {logoLight ? (
         <>
@@ -89,7 +90,10 @@ export function CredentialLink({
       ) : (
         <img src={logo} alt={logoAlt} className={`${box} ${shadow}`} />
       )}
-      <span className="underline-offset-4 group-hover:underline">{label}</span>
+      <span className="inline-flex items-center gap-1">
+        {label}
+        <ExternalLinkIcon className="size-3.5 shrink-0 opacity-70" />
+      </span>
     </a>
   );
 }

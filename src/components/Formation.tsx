@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/LanguageContext";
-import { AcademicIcon } from "./icons";
+import { AcademicIcon, ExternalLinkIcon } from "./icons";
 import { Section } from "./Section";
 
 export function Formation() {
@@ -23,7 +23,7 @@ export function Formation() {
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-yellow-600 hover:underline dark:text-yellow-400"
+                className="text-link mt-1 inline-flex items-center gap-2 text-sm font-medium text-yellow-600 dark:text-yellow-400"
               >
                 {item.logoLight ? (
                   <>
@@ -46,6 +46,7 @@ export function Formation() {
                   />
                 )}
                 {item.place}
+                <ExternalLinkIcon className="size-3.5 shrink-0 opacity-80" />
               </a>
             ) : (
               <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400">{item.place}</p>

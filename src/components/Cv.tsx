@@ -32,7 +32,7 @@ export function Cv() {
     <div className="cv-page bg-page min-h-screen">
       <div className="cv-toolbar cv-no-print sticky top-0 z-20 border-b border-black/10 bg-[#f6f3ed]/90 px-4 py-3 backdrop-blur-md dark:border-white/10 dark:bg-[#0c0b0a]/90">
         <div className="mx-auto flex max-w-[210mm] flex-wrap items-center justify-between gap-3">
-          <a href="#inicio" className="text-sm text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400">
+          <a href="#inicio" className="text-link text-sm text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400">
             ← {t.ui.cv.back}
           </a>
           <div className="flex items-center gap-2">
@@ -65,12 +65,12 @@ export function Cv() {
             <p className="mt-1 text-sm font-medium text-yellow-600 dark:text-yellow-400">{profile.role}</p>
             <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{profile.location}</p>
             <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600 dark:text-gray-400">
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
-              <a href={`tel:${profile.phone.replace(/\s/g, "")}`}>{profile.phone}</a>
-              <a href={profile.github} target="_blank" rel="noreferrer">
+              <a className="text-link" href={`mailto:${profile.email}`}>{profile.email}</a>
+              <a className="text-link" href={`tel:${profile.phone.replace(/\s/g, "")}`}>{profile.phone}</a>
+              <a className="text-link" href={profile.github} target="_blank" rel="noreferrer">
                 {githubHandle(profile.github)}
               </a>
-              <a href={profile.calcomania} target="_blank" rel="noreferrer">
+              <a className="text-link" href={profile.calcomania} target="_blank" rel="noreferrer">
                 {siteHost(profile.calcomania)}
               </a>
             </p>
@@ -139,12 +139,12 @@ export function Cv() {
                 </p>
                 <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-yellow-700 dark:text-yellow-400">
                   {project.demo ? (
-                    <a href={project.demo} target="_blank" rel="noreferrer">
+                    <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
                       {siteHost(project.demo)}
                     </a>
                   ) : null}
                   {project.github ? (
-                    <a href={project.github} target="_blank" rel="noreferrer">
+                    <a className="text-link" href={project.github} target="_blank" rel="noreferrer">
                       {githubHandle(project.github)}
                     </a>
                   ) : null}
