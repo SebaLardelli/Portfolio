@@ -51,7 +51,7 @@ export function Contact() {
                 <span className="block text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
                   {item.label}
                 </span>
-                <span className="mt-0.5 block text-lg font-semibold text-pretty text-gray-900 dark:text-white">
+                <span className="mt-0.5 block text-lg font-semibold break-words text-pretty text-gray-900 dark:text-white">
                   {item.value}
                 </span>
               </span>

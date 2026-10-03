@@ -13,7 +13,7 @@ export function SocialPill({ href, children }: SocialPillProps) {
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-1.5 text-sm transition hover:scale-105 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+      className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-1.5 text-sm transition hover:scale-105 hover:bg-white focus-visible:scale-105 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
     >
       {children}
     </a>

@@ -35,7 +35,7 @@ export function Header() {
         const visible = entries.find((entry) => entry.isIntersecting);
         if (visible?.target.id) setActive(visible.target.id);
       },
-      { threshold: 0.35 }
+      { root: null, rootMargin: "-28% 0px -58% 0px", threshold: 0 }
     );
 
     sections.forEach((section) => observer.observe(section));

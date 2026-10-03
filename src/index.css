@@ -4,6 +4,17 @@
 html {
   font-family: "Onest Variable", system-ui, sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+::selection {
+  background: rgb(251 191 36 / 0.35);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 3px;
 }
 
 .page-width {
