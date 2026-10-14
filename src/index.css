@@ -339,6 +339,17 @@ body {
   }
 }
 
+@media (max-width: 1023px) {
+  .project-body {
+    display: flow-root;
+  }
+
+  .project-frame {
+    float: left;
+    margin: 0.1rem 0.75rem 0.35rem 0;
+  }
+}
+
 .project-lightbox[open] {
   position: fixed;
   inset: 0;
