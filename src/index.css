@@ -287,6 +287,12 @@ body {
   margin-inline: auto;
 }
 
+.project-body {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .project-frame {
   width: 6.75rem;
   max-width: 38%;
@@ -314,6 +320,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .project-body {
+    gap: 1.25rem;
+  }
+
   .project-frame {
     width: 11.5rem;
     max-width: none;

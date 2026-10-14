@@ -90,7 +90,7 @@ export function Projects() {
               </ul>
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-5">
+            <div className="project-body">
               <ProjectShot project={project} priority={index === 0} />
               <p className="min-w-0 flex-1 text-pretty text-gray-800 dark:text-gray-100">{project.description}</p>
             </div>
