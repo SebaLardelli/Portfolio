@@ -19,6 +19,8 @@ export type UiCopy = {
   openDemo: string;
   openSite: string;
   repo: string;
+  enlarge: string;
+  closeImage: string;
   inProgress: string;
   openMenu: string;
   closeMenu: string;

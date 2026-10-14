@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Cv } from "./components/Cv";
 import { Experience } from "./components/Experience";
@@ -38,7 +37,6 @@ export default function App() {
         <Experience />
         <Skills />
         <Formation />
-        <About />
         <Contact />
       </main>
       <Footer />

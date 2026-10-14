@@ -23,7 +23,7 @@ export function Formation() {
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="text-link mt-1 inline-flex items-center gap-2 text-sm font-medium text-yellow-600 dark:text-yellow-400"
+                className="group mt-1 inline-flex items-center gap-2 text-sm font-medium text-yellow-600 dark:text-yellow-400"
               >
                 {item.logoLight ? (
                   <>
@@ -45,7 +45,7 @@ export function Formation() {
                     className="h-6 w-auto max-w-[7rem] object-contain"
                   />
                 )}
-                {item.place}
+                <span className="text-link">{item.place}</span>
                 <ExternalLinkIcon className="size-3.5 shrink-0 opacity-80" />
               </a>
             ) : (

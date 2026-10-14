@@ -5,12 +5,12 @@ import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
 function linkClass(isActive: boolean, stacked = false) {
-  return `rounded-full transition ${
-    stacked ? "block px-4 py-3 text-base" : "px-3 py-2 text-sm xl:text-base"
+  return `rounded-full whitespace-nowrap transition ${
+    stacked ? "block px-4 py-3 text-base" : "px-2 py-2 text-sm xl:px-3 xl:text-base"
   } ${
     isActive
       ? "bg-yellow-400/10 font-semibold text-yellow-600 dark:text-yellow-400"
-      : "text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+      : "text-gray-600 hover:bg-black/5 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
   }`;
 }
 
@@ -20,11 +20,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   const links = [
+    { href: "#inicio", id: "inicio", label: t.ui.nav.about },
     { href: "#proyectos", id: "proyectos", label: t.ui.nav.projects },
     { href: "#experiencia", id: "experiencia", label: t.ui.nav.experience },
     { href: "#habilidades", id: "habilidades", label: t.ui.nav.skills },
     { href: "#formacion", id: "formacion", label: t.ui.nav.formation },
-    { href: "#sobre-mi", id: "sobre-mi", label: t.ui.nav.about },
     { href: "#contacto", id: "contacto", label: t.ui.nav.contact },
   ];
 

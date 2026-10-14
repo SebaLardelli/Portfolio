@@ -14,7 +14,7 @@ export function SocialPill({ href, children }: SocialPillProps) {
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-1.5 text-sm transition hover:scale-105 hover:bg-white focus-visible:scale-105 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+      className="link-chip inline-flex items-center gap-2 px-4 py-1.5 text-sm"
     >
       {children}
     </a>
@@ -80,7 +80,7 @@ export function CredentialLink({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group text-link inline-flex items-center gap-2.5 text-sm text-gray-600 transition hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400"
+      className="group inline-flex items-center gap-2.5 text-sm text-gray-600 transition hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400"
     >
       {logoLight ? (
         <>
@@ -91,7 +91,7 @@ export function CredentialLink({
         <img src={logo} alt={logoAlt} className={`${box} ${shadow}`} />
       )}
       <span className="inline-flex items-center gap-1">
-        {label}
+        <span className="text-link">{label}</span>
         <ExternalLinkIcon className="size-3.5 shrink-0 opacity-70" />
       </span>
     </a>

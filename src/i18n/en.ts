@@ -118,54 +118,33 @@ export const en: Copy = {
     {
       label: "Databases",
       items: [
-        "Table normalization",
-        "Stored procedures",
-        "Functions",
-        "Transactions",
-        "SQL Server backup",
-        "Export to TXT and Excel",
+        "MySQL",
+        "SQL Server",
+        "Supabase (SQL and vector)",
+        "Firebase",
+        "MongoDB",
       ],
     },
     skillGroupsEs[2],
     {
+      ...skillGroupsEs[3],
+      label: "Version control and backup",
+    },
+    {
       label: "Analysis and design",
-      items: [
-        "Elicitation",
-        "Requirements specification",
-        "Diagrams",
-        "Mockups",
-        "Prototyping",
-        "Documentation",
-        "Whimsical",
-        "Figma",
-        "Draw.io",
-        "Creational patterns",
-        "Structural patterns",
-        "Behavioral patterns",
-        "MVC",
-        "Client-server",
-      ],
+      items: ["Whimsical", "Figma", "Draw.io", "MVC", "Client-server"],
     },
     {
       label: "Testing",
-      items: [
-        "TestLink",
-        "Black-box",
-        "White-box",
-        "Gray-box",
-        "Test cases",
-        "Basis path",
-        "Cyclomatic complexity",
-        "Bug reports",
-      ],
+      items: ["TestLink", "Test cases", "Bug reports"],
     },
     {
       label: "AI and automation",
-      items: skillGroupsEs[5].items,
+      items: skillGroupsEs[6].items,
     },
     {
       label: "Infra and networks",
-      items: skillGroupsEs[6].items.map((item) => {
+      items: skillGroupsEs[7].items.map((item) => {
         if (item === "Ruteo estático") return "Static routing";
         if (item === "Ruteo dinámico") return "Dynamic routing";
         return item;
@@ -252,6 +231,8 @@ export const en: Copy = {
     openDemo: "Open demo",
     openSite: "Open site",
     repo: "Repository",
+    enlarge: "Enlarge",
+    closeImage: "Close image",
     inProgress: "In progress",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -261,7 +242,7 @@ export const en: Copy = {
     pageTitle: "Sebastián Lardelli | AI integrations — Backend, PHP, Node.js",
     pageDescription:
       "Software developer from Villa Mugueta, living in Rosario. Final years of Computer Systems Engineering (UAI). Looking for AI integration work. REST APIs in PHP Slim and Node.js, RAG, Docker, and e-commerce in production. Portfolio of Sebastián Lardelli.",
-    contactIntro: "I live in Rosario (I am from Villa Mugueta, Santa Fe). Email me, call me, or open the résumé — all three are here.",
+    contactIntro: "I live in Rosario (I am from Villa Mugueta, Santa Fe). Here are the ways to contact me.",
     contactEmail: "Email",
     contactPhone: "Phone",
     contactCv: "Résumé",

@@ -25,6 +25,8 @@ export const es: Copy = {
     openDemo: "Abrir demo",
     openSite: "Abrir página",
     repo: "Repositorio",
+    enlarge: "Ampliar",
+    closeImage: "Cerrar imagen",
     inProgress: "En curso",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
@@ -34,7 +36,7 @@ export const es: Copy = {
     pageTitle: "Sebastián Lardelli | Integraciones con IA — Backend, PHP, Node.js",
     pageDescription:
       "Desarrollador de software de Villa Mugueta, vive en Rosario. Últimos años de Ingeniería en Sistemas Informáticos (UAI). Búsqueda: integraciones con IA. APIs REST en PHP Slim y Node.js, RAG, Docker y e-commerce en producción. Portfolio de Sebastián Lardelli.",
-    contactIntro: "Vivo en Rosario (soy de Villa Mugueta, Santa Fe). Escribime, llamame o abrí el CV: las tres vías están acá.",
+    contactIntro: "Vivo en Rosario (soy de Villa Mugueta, Santa Fe). Acá dejo las formas para contactarme.",
     contactEmail: "Email",
     contactPhone: "Teléfono",
     contactCv: "Currículum",

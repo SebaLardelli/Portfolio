@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/LanguageContext";
-import { FileIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./icons";
+import { FileIcon, GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./icons";
 import { Section } from "./Section";
 
 export function Contact() {
@@ -31,6 +31,12 @@ export function Contact() {
       href: profile.linkedin,
       icon: <LinkedinIcon className="size-6" />,
     },
+    {
+      label: "GitHub",
+      value: "SebaLardelli",
+      href: profile.github,
+      icon: <GithubIcon className="size-6" />,
+    },
   ];
 
   return (
@@ -38,7 +44,7 @@ export function Contact() {
       <p className="mb-6 text-pretty text-gray-600 dark:text-gray-300">
         {t.ui.contactIntro}
       </p>
-      <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {contacts.map((item) => (
           <li key={item.label}>
             <a
@@ -46,7 +52,7 @@ export function Contact() {
               {...(item.href.startsWith("http") || item.href.endsWith(".pdf")
                 ? { target: "_blank", rel: "noreferrer" }
                 : {})}
-              className="flex items-center gap-4 rounded-2xl border border-black/10 px-4 py-4 transition hover:border-yellow-400/60 hover:bg-yellow-400/5 dark:border-white/10 dark:hover:border-yellow-400/40 dark:hover:bg-yellow-400/5"
+              className="link-card flex items-center gap-4 rounded-2xl border border-black/10 px-4 py-4 dark:border-white/10"
             >
               <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-yellow-400/15 text-yellow-600 dark:text-yellow-400">
                 {item.icon}

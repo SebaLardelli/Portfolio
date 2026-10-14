@@ -58,7 +58,7 @@ export function Cv() {
             <h1 className="text-3xl font-bold tracking-tight text-pretty sm:text-4xl">
               <span className="gradient-name">{profile.name}</span>
             </h1>
-            <p className="mt-1 text-sm font-medium text-yellow-600 dark:text-yellow-400">{profile.role}</p>
+            <p className="cv-accent mt-1 text-sm font-medium text-yellow-600 dark:text-yellow-400">{profile.role}</p>
             <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{profile.location}</p>
             <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600 dark:text-gray-400">
               <a className="text-link" href={`mailto:${profile.email}`}>{profile.email}</a>
@@ -84,7 +84,7 @@ export function Cv() {
         <CvSection title={t.ui.cv.education}>
           <ul className="space-y-3">
             {t.formation.map((item) => (
-              <li key={item.title}>
+              <li key={item.title} className="cv-item">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
                   <h3 className="text-sm font-semibold">
                     {item.title}
@@ -105,7 +105,7 @@ export function Cv() {
         <CvSection title={t.ui.cv.experience}>
           <ul className="space-y-4">
             {t.experience.map((item) => (
-              <li key={`${item.company}-${item.title}`}>
+              <li key={`${item.company}-${item.title}`} className="cv-item">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
                   <h3 className="text-sm font-semibold">
                     {item.title}
@@ -129,7 +129,7 @@ export function Cv() {
         <CvSection title={t.ui.cv.projects}>
           <ul className="space-y-3">
             {t.projects.map((project) => (
-              <li key={project.title}>
+              <li key={project.title} className="cv-item">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4">
                   <h3 className="text-sm font-semibold">{project.title}</h3>
                   <span className="text-xs text-gray-500">{project.tags.map((tag) => tag.name).join(" · ")}</span>
@@ -153,10 +153,10 @@ export function Cv() {
         </CvSection>
 
         <CvSection title={t.ui.cv.skills}>
-          <ul className="space-y-1.5">
+          <ul className="cv-skills space-y-1.5">
             {t.skillGroups.map((group) => (
-              <li key={group.label} className="text-sm">
-                <span className="font-semibold text-yellow-700 dark:text-yellow-400">{group.label}: </span>
+              <li key={group.label} className="cv-item text-sm">
+                <span className="cv-accent font-semibold text-yellow-700 dark:text-yellow-400">{group.label}: </span>
                 <span className="text-gray-700 dark:text-gray-300">{group.items.join(" · ")}</span>
               </li>
             ))}
@@ -182,7 +182,7 @@ export function Cv() {
 function CvSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="cv-block mt-5">
-      <h2 className="mb-2 border-b border-black/10 pb-1 text-xs font-semibold tracking-[0.16em] text-yellow-700 uppercase dark:border-white/10 dark:text-yellow-400">
+      <h2 className="cv-accent mb-2 border-b border-black/10 pb-1 text-xs font-semibold tracking-[0.16em] text-yellow-700 uppercase dark:border-white/10 dark:text-yellow-400">
         {title}
       </h2>
       {children}

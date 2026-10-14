@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/LanguageContext";
-import { FileIcon, GithubIcon, LinkedinIcon, MailIcon } from "./icons";
+import { FileIcon, GithubIcon, LinkedinIcon, MailIcon, UserIcon } from "./icons";
 import { AvailabilityBadge, CredentialLink, SocialPill } from "./Pills";
 
 export function Hero() {
@@ -27,8 +27,30 @@ export function Hero() {
       <p className="mt-2 text-sm font-medium text-pretty text-yellow-600 xl:text-base dark:text-yellow-400">
         {profile.role}
       </p>
+
+      <h2 className="mt-8 flex items-center gap-2 text-2xl font-semibold xl:text-3xl">
+        <span className="text-yellow-500">
+          <UserIcon />
+        </span>
+        {t.ui.sections.about}
+      </h2>
+
+      <p className="anim-fade-in anim-delay-2 mt-5 max-w-3xl text-pretty text-lg text-gray-600 xl:text-xl dark:text-gray-300">
+        {profile.headline}
+      </p>
+      <p className="mt-3 max-w-3xl text-pretty text-base leading-relaxed text-gray-600 xl:text-lg dark:text-gray-400">
+        {profile.summary}
+      </p>
+      <p className="mt-3 text-sm text-gray-500">{profile.location}</p>
+
+      <div className="mt-6 max-w-3xl space-y-4 text-pretty leading-relaxed text-gray-600 dark:text-gray-300">
+        {t.about.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+
       {profile.credentials?.length ? (
-        <ul className="mt-3 flex flex-col gap-2">
+        <ul className="mt-6 flex flex-col gap-2">
           {profile.credentials.map((item) => (
             <li key={item.label}>
               <CredentialLink
@@ -45,18 +67,8 @@ export function Hero() {
         </ul>
       ) : null}
 
-      <p className="anim-fade-in anim-delay-2 mt-5 max-w-3xl text-pretty text-lg text-gray-600 xl:text-xl dark:text-gray-300">
-        {profile.headline}
-      </p>
-      <p className="mt-3 max-w-3xl text-pretty text-base leading-relaxed text-gray-600 xl:text-lg dark:text-gray-400">
-        {profile.summary}
-      </p>
-      <p className="mt-3 text-sm text-gray-500">{profile.location}</p>
-
       <nav className="anim-fade-in anim-delay-3 mt-6 flex flex-wrap gap-3">
-        <SocialPill href={profile.calcomania}>{t.ui.openCalcomania}</SocialPill>
-        <SocialPill href={profile.musicmania}>{t.ui.playMusicmania}</SocialPill>
-        <SocialPill href={`mailto:${profile.email}`}>
+        <SocialPill href="#contacto">
           <MailIcon /> {t.ui.contactMe}
         </SocialPill>
         <SocialPill href={profile.github}>
@@ -68,11 +80,9 @@ export function Hero() {
         <SocialPill href={profile.cv}>
           <FileIcon /> CV
         </SocialPill>
+        <SocialPill href={profile.calcomania}>{t.ui.openCalcomania}</SocialPill>
+        <SocialPill href={profile.musicmania}>{t.ui.playMusicmania}</SocialPill>
       </nav>
-
-      {profile.plus ? (
-        <p className="mt-6 max-w-3xl text-pretty text-sm text-gray-500 dark:text-gray-400">{profile.plus}</p>
-      ) : null}
     </section>
   );
 }
