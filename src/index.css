@@ -344,9 +344,15 @@ body {
     display: flow-root;
   }
 
+  .project-body p {
+    text-wrap: wrap;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
   .project-frame {
     float: left;
-    margin: 0.1rem 0.75rem 0.35rem 0;
+    margin: 0.1rem 0.75rem 0.2rem 0;
   }
 }
 
